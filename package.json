@@ -1,0 +1,22 @@
+{
+  "name": "bikegps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "h3.js",
+  "scripts": {
+    "start": "node h3.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bike",
+  "license": "MIT",
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.3.12",
+    "csv": "^6.0.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.3",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.4.1",
+    "vue": "^3.2.31",
+    "vue2-google-maps": "^0.10.7"
+  }
+}

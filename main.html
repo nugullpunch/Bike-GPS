@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://unpkg.com/h3-js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="uber"></script>
+    <script src="uber2"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_bEWvK62eVdN6DIAOyDTiWxsPBlk642w&region=kr"></script>
+    <script src="https://cdn.rawgit.com/googlemaps/js-map-label/gh-pages/src/maplabel.js"></script>
+    <style type="text/css">
+      #map {
+        border: 2px solid black;
+        width: 1200px;
+        height: 700px;
+        margin-left: 1%;
+      }
+      #selc {
+        border: 2px solid black;
+        width: 400px;
+        height: 700px;
+        margin-left: 2%;
+      }
+      body {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div class="Searchs" style="margin-left: 2%">
+        <form>
+          <input
+            type="text"
+            id="name"
+            style="width: 200px; height: 50px"
+            placeholder="검색창입니다."
+          />
+          <button style="width: 50px; height: 50px">검색</button>
+        </form>
+      </div>
+      <div
+        class="btn-group btn-group-toggle btn-group-lg"
+        data-toggle="buttons"
+        style="margin-left: 10px"
+      >
+        <label class="btn btn-outline-success active">
+          <input
+            type="radio"
+            name="options"
+            autocomplete="off"
+            checked
+            id="poi"
+          />
+          POI 지점파악
+        </label>
+        <label class="btn btn-outline-success">
+          <input type="radio" name="options" autocomplete="off" id="dloc" />
+          따릉이 대여소 위치
+        </label>
+        <label class="btn btn-outline-success">
+          <input type="radio" name="options" autocomplete="off" id="moim" />
+          모임 장소 추천
+        </label>
+      </div>
+    </div>
+    <div style="display: flex">
+      <div id="selc">POI순위</div>
+      <div id="map"></div>
+      <div id="map2"></div>
+    </div>
+
+    <div id="vizContainer"></div>
+  </body>
+</html>
+
+<script
+  type="text/javascript"
+  src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"
+></script>
+<script type="text/javascript">
+  function initViz() {
+    var containerDiv = document.getElementById("vizContainer"),
+      url = "https://서버/views/시각화자료";
+    //태블로 한거 가져올 필요 존재
+    var viz = new tableau.Viz(containerDiv, url);
+    initViz();
+  }
+</script>
