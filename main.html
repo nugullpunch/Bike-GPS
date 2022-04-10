@@ -21,16 +21,25 @@
     <script src="https://unpkg.com/h3-js"></script>
     <script src="socket.io/socket.io.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <script src="uber"></script>
-    <script src="uber2"></script>
+    <script src="loaddb"></script>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-3.1.1.min.js"
     ></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_bEWvK62eVdN6DIAOyDTiWxsPBlk642w&region=kr"></script>
     <script src="https://cdn.rawgit.com/googlemaps/js-map-label/gh-pages/src/maplabel.js"></script>
+    <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
     <style type="text/css">
       #map {
+        border: 2px solid black;
+        width: 1200px;
+        height: 700px;
+        margin-left: 1%;
+      }
+      #vizContainer {
         border: 2px solid black;
         width: 1200px;
         height: 700px;
@@ -72,6 +81,7 @@
             autocomplete="off"
             checked
             id="poi"
+            onclick
           />
           POI 지점파악
         </label>
@@ -87,24 +97,21 @@
     </div>
     <div style="display: flex">
       <div id="selc">POI순위</div>
-      <div id="map"></div>
-      <div id="map2"></div>
+      <div id="vizContainer"></div>
     </div>
-
-    <div id="vizContainer"></div>
+    <div id="map"></div>
+    <div id="map2"></div>
   </body>
 </html>
-
+<script></script>
 <script
   type="text/javascript"
   src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"
 ></script>
 <script type="text/javascript">
-  function initViz() {
-    var containerDiv = document.getElementById("vizContainer"),
-      url = "https://서버/views/시각화자료";
-    //태블로 한거 가져올 필요 존재
-    var viz = new tableau.Viz(containerDiv, url);
-    initViz();
-  }
+  var containerDiv = document.getElementById("vizContainer"),
+    url =
+      "https://public.tableau.com/views/1_16494840562800/1?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link";
+  //태블로 한거 가져올 필요 존재
+  var viz = new tableau.Viz(containerDiv, url);
 </script>

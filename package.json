@@ -14,7 +14,11 @@
     "csv": "^6.0.5",
     "csvtojson": "^2.0.10",
     "express": "^4.17.3",
+    "mariadb": "^3.0.0",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.18.0",
+    "sequelize-cli": "^6.4.1",
     "socket.io": "^4.4.1",
     "vue": "^3.2.31",
     "vue2-google-maps": "^0.10.7"

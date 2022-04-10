@@ -12,6 +12,19 @@ const parse = require("csv").parse;
 
 const h3 = require("h3-js");
 
+const db_config = require("./database.js");
+const conn = db_config.init();
+
+app.set("views", __dirname + "views");
+app.set("view engine", "ejs");
+
+app.get("/dbs", (req, res) => {
+  conn.query("SELECT * FROM `test`", function (error, results, fields) {
+    if (error) throw error;
+    res.json(results);
+    res.end();
+  });
+});
 //var csvArray = []; //csv파일을 넣을 것임.
 const ddID = []; //id
 const ddseq = []; //sequence
@@ -211,8 +224,8 @@ app.get("/uber", (req, res) => {
     }
   });
 });
-app.get("/uber2", (req, res) => {
-  fs.readFile("uber2.js", (err, data) => {
+app.get("/loaddb", (req, res) => {
+  fs.readFile("loaddb.js", (err, data) => {
     if (err) {
       res.send("error");
     } else {
@@ -250,6 +263,6 @@ app.get("map", (req, res) => {
     }
   );
 });
-server.listen(80, function () {
+server.listen(8756, function () {
   console.log("서버시작");
 });
