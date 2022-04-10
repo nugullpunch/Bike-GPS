@@ -189,7 +189,7 @@ function initMap(drlat, drlon) {
   }
 }
 
-//AIzaSyC_bEWvK62eVdN6DIAOyDTiWxsPBlk642w
+//
 
 app.get("/", (req, res) => {
   fs.readFile("main.html", (err, data) => {
