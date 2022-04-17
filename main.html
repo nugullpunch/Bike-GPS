@@ -18,27 +18,15 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
 
-    <script src="https://unpkg.com/h3-js"></script>
-    <script src="socket.io/socket.io.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    <script src="uber"></script>
+    <!-- <script src="uber"></script> -->
+    <script src="uber2"></script>
     <script src="loaddb"></script>
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-    ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
-    <script src="https://cdn.rawgit.com/googlemaps/js-map-label/gh-pages/src/maplabel.js"></script>
     <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
+
     <style type="text/css">
-      #map {
-        border: 2px solid black;
-        width: 1200px;
-        height: 700px;
-        margin-left: 1%;
-      }
       #vizContainer {
         border: 2px solid black;
         width: 1200px;
@@ -53,62 +41,124 @@
       }
       body {
         padding-top: 20px;
+        padding-left: 10%;
+      }
+      .btn-check {
+        border-radius: 10px;
+      }
+      .btn {
+        font-size: 25px;
+      }
+      .Searchs {
+        margin-left: 2%;
+      }
+      #name {
+        width: 200px;
+        height: 50px;
+      }
+      .Searchs :focus {
+        border-width: 0.5px;
+        transition-duration: 1s;
+        border-radius: 50px;
+        width: 500px;
       }
     </style>
   </head>
+
   <body>
-    <div style="display: flex">
-      <div class="Searchs" style="margin-left: 2%">
+    <div style="display: flex; margin-left: 1%">
+      <div
+        class="btn-group"
+        role="group"
+        style="margin-left: 10px"
+        aria-label="Basic radio toggle button group"
+      >
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          autocomplete="off"
+          id="poi"
+          onclick="javascript:poidlocmoim(event)"
+          checked
+        />
+        <label class="btn btn-outline-success" for="poi" id="asd">
+          POI 지점파악
+        </label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          autocomplete="off"
+          id="dloc"
+          onclick="javascript:poidlocmoim(event)"
+        />
+        <label class="btn btn-outline-success" for="dloc">
+          따릉이 대여소 위치
+        </label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          autocomplete="off"
+          id="moim"
+          onclick="javascript:poidlocmoim(event)"
+        />
+        <label class="btn btn-outline-success" for="moim">
+          모임 장소 추천
+        </label>
+      </div>
+
+      <div class="Searchs">
         <form>
           <input
             type="text"
+            class="inputsearch"
             id="name"
-            style="width: 200px; height: 50px"
             placeholder="검색창입니다."
+            style="width: 200px"
           />
           <button style="width: 50px; height: 50px">검색</button>
         </form>
       </div>
-      <div
-        class="btn-group btn-group-toggle btn-group-lg"
-        data-toggle="buttons"
-        style="margin-left: 10px"
-      >
-        <label class="btn btn-outline-success active">
-          <input
-            type="radio"
-            name="options"
-            autocomplete="off"
-            checked
-            id="poi"
-            onclick
-          />
-          POI 지점파악
-        </label>
-        <label class="btn btn-outline-success">
-          <input type="radio" name="options" autocomplete="off" id="dloc" />
-          따릉이 대여소 위치
-        </label>
-        <label class="btn btn-outline-success">
-          <input type="radio" name="options" autocomplete="off" id="moim" />
-          모임 장소 추천
-        </label>
-      </div>
     </div>
+
     <div style="display: flex">
-      <div id="selc">POI순위</div>
       <div id="vizContainer"></div>
+      <div id="selc">POI순위</div>
     </div>
-    <div id="map"></div>
-    <div id="map2"></div>
+    <div id="map">
+      <form>
+        <input
+          type="text"
+          id="username"
+          placeholder="ID"
+          required
+          style="width: 250px; height: 50px"
+        />
+        <input
+          type="text"
+          id="innertext"
+          placeholder="리뷰"
+          required
+          autocomplete="off"
+          style="width: 550px; height: 50px"
+        />
+        <button
+          class="reviewbtn"
+          onclick="javascript:inputreview(event)"
+          style="width: 70px; height: 50px"
+        >
+          등록
+        </button>
+      </form>
+    </div>
   </body>
 </html>
-<script></script>
-<script
-  type="text/javascript"
-  src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"
-></script>
-<script type="text/javascript">
+
+<script>
   var containerDiv = document.getElementById("vizContainer"),
     url =
       "https://public.tableau.com/views/1_16494840562800/1?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link";

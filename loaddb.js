@@ -2,7 +2,7 @@ var jsonRepository = {};
 
 var id = [];
 var pw = [];
-
+//json으로 받아오기
 $.ajax({
   url: "dbs",
   dataType: "json",
@@ -13,8 +13,8 @@ $.ajax({
 
 function splitData() {
   for (var i = 0; i < jsonRepository.length; i++) {
-    id.push(jsonRepository[i]["ID"]);
+    id.push(jsonRepository[i]["place"]);
     pw.push(jsonRepository[i]["PW"]);
-    console.log(id);
   }
+  console.log(id);
 }
