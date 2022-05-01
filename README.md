@@ -12,6 +12,10 @@ npm i --save socket.io
 
 npm install @googlemaps/google-maps-services-js
 
+npm install mysql
+
+vim DBCreate.js
+
 진행하였고
 
 <실행 전 코드 수정해야할 곳>
@@ -27,8 +31,10 @@ node h3.js start
 
 ---
 
-04/11 업데이트
+05/02 업데이트
 
-tableau js 연동 완료.
+모바일 뷰를 위한 뷰포트 설정 완료
 
-데이터베이스 연결완료
+웹 > 데이터베이스로 전달 성공
+
+발견한 문제 : 버튼 클릭 시 데이터베이스로 전달은 되지만 /test 페이지가 열리는 문제(이동하지 않는 방법 찾는 중)

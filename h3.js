@@ -5,6 +5,8 @@ const fs = require("fs");
 const app = express();
 const server = http.createServer(app);
 const io = socket(server);
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // const path = require("path");
 // const { parser } = require("csv");
@@ -34,25 +36,6 @@ io.sockets.on("connection", (socket) => {
   console.log("새로운 클라이언트 접속", ip, socket.id, req.ip);
   //console.log(user);
   //console.log(user[socket.id]);
-
-  socket.on("uinput", (data) => {
-    console.log(data); //입력받은 데이터 불러오기
-    var places = data.place;
-    var reviews = data.review;
-    var dates = data.date;
-    console.log(places);
-    conn.query(
-      "INSERT INTO test1(place,review,date) VALUES(?,?,?)",
-      [places, reviews, dates],
-      function (err, rows, fields) {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(rows.name);
-        }
-      }
-    );
-  });
 });
 app.get("/dbs", (req, res) => {
   conn.query("SELECT * FROM `test1`", function (error, results, fields) {
@@ -140,6 +123,65 @@ app.get("/map", (req, res) => {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         res.end();
+      }
+    }
+  );
+});
+app.post("/test", function (req, res) {
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let date = today.getDate();
+  let day = "";
+  switch (today.getDay()) {
+    case 0:
+      day = "일";
+      break;
+    case 1:
+      day = "월";
+      break;
+    case 2:
+      day = "화";
+      break;
+    case 3:
+      day = "수";
+      break;
+    case 4:
+      day = "목";
+      break;
+    case 5:
+      day = "금";
+      break;
+    case 6:
+      day = "토";
+      break;
+    default:
+      day = " ";
+      break;
+  }
+
+  userinput = {
+    place: "",
+    review: "",
+    date: "",
+  };
+  let uplace = req.body.username;
+  let ureview = req.body.innertext;
+  let udate = year + "." + month + "." + date + " " + day;
+  userinput.place = uplace;
+  userinput.review = ureview;
+  userinput.date = udate;
+  //userint(userinput);
+  console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
+
+  conn.query(
+    "INSERT INTO test1(place,review,date) VALUES(?,?,?)",
+    [uplace, ureview, udate],
+    function (err, rows, fields) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(rows.name);
       }
     }
   );

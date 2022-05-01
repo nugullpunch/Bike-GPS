@@ -1,7 +1,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <meta
+      name="viewport"
+      content="width = device-width, initial-scale = 1, minimum-scale=0.25"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,20 +31,13 @@
 
     <style type="text/css">
       #vizContainer {
-        border: 2px solid black;
-        width: 1200px;
         height: 700px;
-        margin-left: 1%;
       }
       #selc {
         border: 2px solid black;
-        width: 400px;
-        height: 700px;
-        margin-left: 2%;
       }
       body {
         padding-top: 20px;
-        padding-left: 10%;
       }
       .btn-check {
         border-radius: 10px;
@@ -49,113 +45,123 @@
       .btn {
         font-size: 25px;
       }
-      .Searchs {
-        margin-left: 2%;
-      }
+
       #name {
-        width: 200px;
         height: 50px;
       }
       .Searchs :focus {
         border-width: 0.5px;
         transition-duration: 1s;
         border-radius: 50px;
-        width: 500px;
       }
     </style>
   </head>
 
   <body>
-    <div style="display: flex; margin-left: 1%">
-      <div
-        class="btn-group"
-        role="group"
-        style="margin-left: 10px"
-        aria-label="Basic radio toggle button group"
-      >
-        <input
-          type="radio"
-          class="btn-check"
-          name="options"
-          autocomplete="off"
-          id="poi"
-          onclick="javascript:poidlocmoim(event)"
-          checked
-        />
-        <label class="btn btn-outline-success" for="poi" id="asd">
-          POI 지점파악
-        </label>
+    <div class="col-xs-11">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="col-xs">
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="options"
+                autocomplete="off"
+                id="poi"
+                onclick="javascript:poidlocmoim(event)"
+                checked
+              />
+              <label class="col-lg btn btn-outline-success" for="poi" id="asd">
+                POI 지점파악
+              </label>
+              <input
+                type="radio"
+                class="btn-check"
+                name="options"
+                autocomplete="off"
+                id="dloc"
+                onclick="javascript:poidlocmoim(event)"
+              />
+              <label class="col-lg-5 btn btn-outline-success" for="dloc">
+                따릉이 대여소 위치
+              </label>
 
-        <input
-          type="radio"
-          class="btn-check"
-          name="options"
-          autocomplete="off"
-          id="dloc"
-          onclick="javascript:poidlocmoim(event)"
-        />
-        <label class="btn btn-outline-success" for="dloc">
-          따릉이 대여소 위치
-        </label>
+              <input
+                type="radio"
+                class="btn-check"
+                name="options"
+                autocomplete="off"
+                id="moim"
+                onclick="javascript:poidlocmoim(event)"
+              />
+              <label class="col-lg-3 btn btn-outline-success" for="moim">
+                모임 장소 추천
+              </label>
+            </div>
+          </div>
+        </div>
 
-        <input
-          type="radio"
-          class="btn-check"
-          name="options"
-          autocomplete="off"
-          id="moim"
-          onclick="javascript:poidlocmoim(event)"
-        />
-        <label class="btn btn-outline-success" for="moim">
-          모임 장소 추천
-        </label>
+        <div class="col-lg-3">
+          <div class="Searchs">
+            <form>
+              <input
+                type="text"
+                class="inputsearch"
+                id="name"
+                placeholder="검색창입니다."
+                style="width: 70%"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                style="width: 20%; height: 50px"
+              >
+                검색
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <div class="Searchs">
-        <form>
+      <div class="row">
+        <div class="col-lg-9" id="vizContainer"></div>
+        <div class="col-sm" id="selc">POI순위</div>
+      </div>
+      <div id="map">
+        <form action="/test" method="POST">
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            placeholder="ID"
+            required
+            style="height: 50px"
+            target="blackifr"
+          />
           <input
             type="text"
-            class="inputsearch"
-            id="name"
-            placeholder="검색창입니다."
-            style="width: 200px"
+            name="innertext"
+            placeholder="리뷰"
+            required
+            autocomplete="off"
+            style="width: 550px; height: 50px"
           />
-          <button style="width: 50px; height: 50px">검색</button>
+          <button
+            type="submit"
+            class="btn btn-outline-secondary"
+            style="width: 70px; height: 50px"
+          >
+            등록
+          </button>
         </form>
       </div>
     </div>
-
-    <div style="display: flex">
-      <div id="vizContainer"></div>
-      <div id="selc">POI순위</div>
-    </div>
-    <div id="map">
-      <form>
-        <input
-          type="text"
-          id="username"
-          placeholder="ID"
-          required
-          style="width: 250px; height: 50px"
-        />
-        <input
-          type="text"
-          id="innertext"
-          placeholder="리뷰"
-          required
-          autocomplete="off"
-          style="width: 550px; height: 50px"
-        />
-        <button
-          class="reviewbtn"
-          onclick="javascript:inputreview(event)"
-          style="width: 70px; height: 50px"
-        >
-          등록
-        </button>
-      </form>
-    </div>
   </body>
+  <iframe name="blackifr" style="display: none" ;></iframe>
 </html>
 
 <script>
