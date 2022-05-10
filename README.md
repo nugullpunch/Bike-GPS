@@ -46,3 +46,9 @@ node h3.js start
 현재고찰 : 주변 모임 장소 추천부분은 현재 구글 지도로 나오는 중인데,
 
 이대로 나타내어도 좋은지 아니면 다른 뷰나 방법으로 나타낼 방법이 있는지 고민중입니다.
+
+---
+화면스샷
+![Desktop Screenshot 2022 05 11 - 04 09 10 73](https://user-images.githubusercontent.com/64082500/167704557-be6fb483-53c8-4cd3-bba4-5f16d4278ecb.png)
+![Desktop Screenshot 2022 05 11 - 04 09 30 50](https://user-images.githubusercontent.com/64082500/167704572-ed7a9482-cbe2-432a-8468-8238efe7e24d.png)
+
