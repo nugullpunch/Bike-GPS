@@ -5,6 +5,8 @@
       name="viewport"
       content="width = device-width, initial-scale = 1, minimum-scale=0.25"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,6 +25,10 @@
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b17d4fa9e7.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- <script src="uber"></script> -->
     <script src="uber2"></script>
@@ -30,6 +36,11 @@
     <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
 
     <style type="text/css">
+      :root {
+        --text-color: #f0f4f5;
+        --background-color: #415462;
+        --accent-color: #5dba83;
+      }
       #vizContainer {
         height: 700px;
       }
@@ -39,88 +50,208 @@
       body {
         padding-top: 20px;
       }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:link {
+        color: black;
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      .navbar {
+        display: flex;
+        justify-content: start;
+        align-items: left;
+        text-align: left;
+        background: #f3f3f3;
+        padding: 8px 12px;
+      }
+      .navbar_logo {
+        font-size: 30px;
+        color: black;
+        margin-left: 10px;
+      }
+      .navbar_menu {
+        display: flex;
+        list-style: none;
+        font-size: 20px;
+        padding-left: 3%;
+        padding-top: 5px;
+      }
+      .navbar_menu li {
+        padding: 8px 16px;
+      }
+      .navbar_menu :hover {
+        background: #5dba83;
+        border-radius: 4px;
+      }
+      .navbar_togglebtn {
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+        color: #5dba83;
+      }
+      @media screen and(max-width:768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 8px 24px;
+        }
+        .navbar_menu {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .navbar_menu li {
+          width: 100%;
+          text-align: center;
+        }
+        .navbar_togglebtn {
+          display: block;
+        }
+        .navbar_menu.active {
+          display: flex;
+        }
+      }
       .btn-check {
         border-radius: 10px;
       }
       .btn {
-        font-size: 25px;
+        font-size: 20px;
       }
-
+      input {
+        outline: none;
+      }
       #name {
+        height: 45px;
+        border: none;
+      }
+      .searchform {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #5dba83;
         height: 50px;
       }
-      .Searchs :focus {
+      .Searchs :focus-within {
         border-width: 0.5px;
         transition-duration: 1s;
         border-radius: 50px;
+      }
+      .searchbtn {
+        border-radius: 50px;
+      }
+      i {
+        color: #5dba83;
+      }
+      .selectbox {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 40px;
+        font-size: 19px;
+      }
+      .btn-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     </style>
   </head>
 
   <body>
-    <div class="col-xs-11">
-      <div class="row">
-        <div class="col-lg-9">
-          <div class="col-xs">
-            <div
-              class="btn-group"
-              role="group"
-              aria-label="Basic radio toggle button group"
-            >
-              <input
-                type="radio"
-                class="btn-check"
-                name="options"
-                autocomplete="off"
-                id="poi"
-                onclick="javascript:poidlocmoim(event)"
-                checked
-              />
-              <label class="col-lg btn btn-outline-success" for="poi" id="asd">
-                POI 지점파악
-              </label>
-              <input
-                type="radio"
-                class="btn-check"
-                name="options"
-                autocomplete="off"
-                id="dloc"
-                onclick="javascript:poidlocmoim(event)"
-              />
-              <label class="col-lg-5 btn btn-outline-success" for="dloc">
-                따릉이 대여소 위치
-              </label>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="bikegps" width="60" />
+        <a href="">따릉이 핫 스팟</a>
+      </div>
 
-              <input
-                type="radio"
-                class="btn-check"
-                name="options"
-                autocomplete="off"
-                id="moim"
-                onclick="javascript:poidlocmoim(event)"
-              />
-              <label class="col-lg-3 btn btn-outline-success" for="moim">
-                모임 장소 추천
-              </label>
-            </div>
+      <ul class="navbar_menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">자유게시판</a></li>
+      </ul>
+      <a href="#" class="navbar_togglebtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
+
+    <div class="col-lg-11">
+      <div class="row">
+        <div class="col-lg-7">
+          <div
+            class="col-lg-12 btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="poi"
+              onclick="javascript:poidlocmoim(event)"
+              checked
+            />
+            <label class="col-lg-3 btn btn-outline-success" for="poi" id="asd">
+              POI 지점파악
+            </label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="dloc"
+              onclick="javascript:poidlocmoim(event)"
+            />
+            <label class="col-lg-5 btn btn-outline-success" for="dloc">
+              따릉이 대여소 위치
+            </label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="moim"
+              onclick="javascript:poidlocmoim(event)"
+            />
+            <label class="col-lg-4 btn btn-outline-success" for="moim">
+              모임 장소 추천
+            </label>
           </div>
         </div>
 
-        <div class="col-lg-3">
+        <div class="col-lg-2">
+          <select
+            class="form-select form-select-lg selectbox"
+            onchange="javascript:guselect(this.value)"
+            id=""
+          >
+            <option name="gus" selected value="전체구">전체구</option>
+            <option name="gus" value="강서구">강서구</option>
+            <option name="gus" value="송파구">송파구</option>
+          </select>
+        </div>
+
+        <div class="col-lg-3" name="Searching">
           <div class="Searchs">
-            <form>
+            <form class="searchform">
               <input
-                type="text"
                 class="inputsearch"
+                type="text"
                 id="name"
-                placeholder="검색창입니다."
+                placeholder="POI검색"
                 style="width: 70%"
               />
               <button
-                class="btn btn-outline-secondary"
-                style="width: 20%; height: 50px"
+                class="btn btn-outline-secondary searchbtn"
+                style="width: 28%; height: 50px"
               >
-                검색
+                <i class="fas fa-search"></i>
               </button>
             </form>
           </div>
@@ -129,7 +260,23 @@
 
       <div class="row">
         <div class="col-lg-9" id="vizContainer"></div>
-        <div class="col-sm" id="selc">POI순위</div>
+        <div class="col-sm" id="selc">
+          <div class="ranking" id="ranking">
+            <dt>POI순위</dt>
+            <dd>
+              <ol>
+                <li>
+                  <a
+                    href="#"
+                    id="all-rank1"
+                    onclick="javascript:poiselect(event)"
+                    >까치산로 14길 빌라촌</a
+                  >
+                </li>
+              </ol>
+            </dd>
+          </div>
+        </div>
       </div>
       <div id="map">
         <form action="/test" method="POST">
@@ -143,6 +290,7 @@
             target="blackifr"
           />
           <input
+            class="searchinput"
             type="text"
             name="innertext"
             placeholder="리뷰"
@@ -160,6 +308,29 @@
         </form>
       </div>
     </div>
+    <div class="ifa col-lg-12" id="ifa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1651592189362!6m8!1m7!1scnMANXzGDyB4-pzmpuLPPg!2m2!1d37.55307498687083!2d126.8794596747501!3f208.29555416664593!4f0!5f0.7820865974627469"
+        width="900"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="ifamap col-lg-12" id="ifamap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.57897992661157!2d127.13009279879157!3d37.51660052679466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cafc468f8986f%3A0x70073282c3f4ccaf!2z7YyM66as7YGs65287IOBIOyYrOumvO2UveqzteybkO2CpOy5nOygkA!5e0!3m2!1sko!2skr!4v1652208227962!5m2!1sko!2skr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   </body>
   <iframe name="blackifr" style="display: none" ;></iframe>
 </html>
@@ -167,7 +338,7 @@
 <script>
   var containerDiv = document.getElementById("vizContainer"),
     url =
-      "https://public.tableau.com/views/1_16494840562800/1?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link";
+      "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link";
   //태블로 한거 가져올 필요 존재
   var viz = new tableau.Viz(containerDiv, url);
 </script>

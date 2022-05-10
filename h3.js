@@ -186,6 +186,17 @@ app.post("/test", function (req, res) {
     }
   );
 });
+app.get("/bikegps", (req, res) => {
+  fs.readFile("BIKEGPS.PNG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
 
 server.listen(8756, function () {
   console.log("서버시작");
