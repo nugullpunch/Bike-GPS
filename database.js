@@ -1,10 +1,10 @@
 let mysql = require("mysql");
 let db_info = {
-  host: "",
-  port: "",
-  user: "",
-  password: "",
-  database: "",
+  host: "223.194.46.212",
+  port: "3306",
+  user: "root",
+  password: "12345!",
+  database: "bgpstest",
 };
 
 module.exports = {

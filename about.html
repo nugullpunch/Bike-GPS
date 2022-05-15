@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width = device-width, initial-scale = 1, minimum-scale=0.25"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b17d4fa9e7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="uber"></script> -->
+    <script src="uber2"></script>
+    <script src="loaddb"></script>
+    <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
+
+    <style type="text/css">
+      :root {
+        --text-color: #f0f4f5;
+        --background-color: #415462;
+        --accent-color: #5dba83;
+      }
+      #vizContainer {
+        height: 700px;
+      }
+      #selc {
+        border: 2px solid black;
+      }
+      body {
+        padding-top: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:link {
+        color: black;
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      .navbar {
+        display: flex;
+        justify-content: start;
+        align-items: left;
+        text-align: left;
+        background: #f3f3f3;
+        padding: 8px 12px;
+      }
+      .navbar_logo {
+        font-size: 30px;
+        color: black;
+        margin-left: 10px;
+      }
+      .navbar_menu {
+        display: flex;
+        list-style: none;
+        font-size: 20px;
+        padding-left: 3%;
+        padding-top: 5px;
+      }
+      .navbar_menu li {
+        padding: 8px 16px;
+      }
+      .navbar_menu :hover {
+        background: #5dba83;
+        border-radius: 4px;
+      }
+      .navbar_togglebtn {
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+        color: #5dba83;
+      }
+      @media screen and(max-width:768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 8px 24px;
+        }
+        .navbar_menu {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .navbar_menu li {
+          width: 100%;
+          text-align: center;
+        }
+        .navbar_togglebtn {
+          display: block;
+        }
+        .navbar_menu.active {
+          display: flex;
+        }
+      }
+      .btn-check {
+        border-radius: 10px;
+      }
+      .btn {
+        font-size: 20px;
+      }
+      input {
+        outline: none;
+      }
+      #name {
+        height: 45px;
+        border: none;
+      }
+      .searchform {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #5dba83;
+        height: 50px;
+      }
+      .Searchs :focus-within {
+        border-width: 0.5px;
+        transition-duration: 1s;
+        border-radius: 50px;
+      }
+      .searchbtn {
+        border-radius: 50px;
+      }
+      i {
+        color: #5dba83;
+      }
+      .selectbox {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 40px;
+        font-size: 19px;
+      }
+      .btn-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .ifa {
+        margin-top: 100px;
+      }
+      .ifamap {
+        margin-top: 100px;
+      }
+      .outpicinner {
+        background-image: url("pariscroissant");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 90%;
+        height: 70%;
+        text-align: center;
+        color: white;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-title {
+        width: 100%;
+      }
+      .innertext {
+        position: relative;
+        background-color: #f3f3f3;
+        width: 80%;
+        height: 25%;
+        text-align: center;
+        margin: 0px auto;
+        top: -35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="bikegps" width="60" />
+        <a href="">따릉이 핫 스팟</a>
+      </div>
+
+      <ul class="navbar_menu">
+        <li><a href="main">Home</a></li>
+        <li><a href="freenote">자유게시판</a></li>
+        <li><a href="">about</a></li>
+      </ul>
+      <a href="#" class="navbar_togglebtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
+    <h1>따릉이 핫 스팟에 대해</h1>
+    <div class="poiinfo">
+      <div class="outpicinner">
+        <h3 class="main-title">
+          따릉이 GPS 데이터 분석을 통한<br />POI(Point of Interest) 시각화
+        </h3>
+      </div>
+      <div class="innertext">
+        <h4>
+          따릉이 GPS 데이터 분석을 통해 사람들이 많이 모이는 지점을 시각화
+        </h4>
+      </div>
+    </div>
+    <div class="whatweuse">
+      <div class="outpicinner">
+        <h3 class="main-title">
+          약 1.45억건의 GPS 데이터와<br />440만명의 이용자 데이터를 활용
+        </h3>
+      </div>
+      <div class="innertext">
+        <h4>
+          2020.10 ~ 2021.4 까지의 1.45억건의 GPS 데이터와<br />
+          440만명의 이용자 데이터를 사용
+        </h4>
+      </div>
+    </div>
+    <div class="weuseuberh3">
+      <div class="outpicinner">
+        <h3 class="main-title">Uber H3 육각형 공간분할을 통한 POI분석</h3>
+      </div>
+      <div class="innertext">
+        <h4>
+          Uber H3를 활용한 육각형 공간 분할을 사용하여 각 지점마다 거리가 동일한
+          효율적인 공간분할을 하고 이를 기반으로 효과적인 POI분석을 진행
+        </h4>
+      </div>
+    </div>
+    <div class="weusetableau">
+      <div class="outpicinner">
+        <h3 class="main-title">Tableau를 통한 분석자료 제공</h3>
+      </div>
+      <div class="innertext">
+        <h4>
+          태블로를 통해 분석한 자료를 제공하며 사용자에게 상호작용을 제공하여
+          편의성을 제공합니다.
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>

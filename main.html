@@ -36,6 +36,22 @@
     <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
 
     <style type="text/css">
+      @font-face {
+        font-family: "Happiness-Sans-Title";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "MinSans-Medium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
       :root {
         --text-color: #f0f4f5;
         --background-color: #415462;
@@ -48,6 +64,7 @@
         border: 2px solid black;
       }
       body {
+        font-family: "NanumSquare";
         padding-top: 20px;
       }
       a {
@@ -71,6 +88,7 @@
         padding: 8px 12px;
       }
       .navbar_logo {
+        font-family: "Happiness-Sans-Title";
         font-size: 30px;
         color: black;
         margin-left: 10px;
@@ -133,6 +151,7 @@
         border: none;
       }
       .searchform {
+        font-family: "MinSans-Medium";
         border-style: solid;
         border-width: 1px;
         border-color: #5dba83;
@@ -149,7 +168,11 @@
       i {
         color: #5dba83;
       }
+      .ranking {
+        font-family: "MinSans-Medium";
+      }
       .selectbox {
+        font-family: "MinSans-Medium";
         margin-top: 5px;
         margin-bottom: 5px;
         width: 100%;
@@ -159,6 +182,13 @@
       .btn-group {
         margin-top: 5px;
         margin-bottom: 5px;
+      }
+      .ifa {
+        margin-top: 100px;
+        text-align: center;
+      }
+      .ifamap {
+        margin-top: 100px;
       }
     </style>
   </head>
@@ -172,7 +202,8 @@
 
       <ul class="navbar_menu">
         <li><a href="">Home</a></li>
-        <li><a href="">자유게시판</a></li>
+        <li><a href="freenote">자유게시판</a></li>
+        <li><a href="about">about</a></li>
       </ul>
       <a href="#" class="navbar_togglebtn">
         <i class="fas fa-bars"></i>
@@ -266,11 +297,153 @@
             <dd>
               <ol>
                 <li>
-                  <a
-                    href="#"
-                    id="all-rank1"
-                    onclick="javascript:poiselect(event)"
-                    >까치산로 14길 빌라촌</a
+                  <a href="#" id="all-rank1" onclick="javascript:poiselect(id)"
+                    >올림픽공원역 3번출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank2" onclick="javascript:poiselect(id)"
+                    >GS25 한강잠실4호점 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank3" onclick="javascript:poiselect(id)"
+                    >안양천합수부 길목</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank4" onclick="javascript:poiselect(id)"
+                    >여름캠핑장 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank5" onclick="javascript:poiselect(id)"
+                    >안양천합수부 중앙</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank6" onclick="javascript:poiselect(id)"
+                    >발산역 6,7번출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank7" onclick="javascript:poiselect(id)"
+                    >수상관장 콜택시승간장 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank8" onclick="javascript:poiselect(id)"
+                    >잠실마루쉼터 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank9" onclick="javascript:poiselect(id)"
+                    >GS25 한강잠실2호점 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank10" onclick="javascript:poiselect(id)"
+                    >올림픽공원 평화의 광장</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank11" onclick="javascript:poiselect(id)"
+                    >한강공원 잠실제1주차장 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank12" onclick="javascript:poiselect(id)"
+                    >잠실역 2번출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank13" onclick="javascript:poiselect(id)"
+                    >안양천합수부 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank14" onclick="javascript:poiselect(id)"
+                    >화곡역 7번 출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank15" onclick="javascript:poiselect(id)"
+                    >올림픽공원프라자</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank16" onclick="javascript:poiselect(id)"
+                    >올림픽공원 세계평화의문</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank17" onclick="javascript:poiselect(id)"
+                    >가양역 9번 출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank18" onclick="javascript:poiselect(id)"
+                    >마곡역 교차로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank19" onclick="javascript:poiselect(id)"
+                    >올림픽공원 국기광장</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank20" onclick="javascript:poiselect(id)"
+                    >잠실역 7,8번 출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank21" onclick="javascript:poiselect(id)"
+                    >석촌역 교차로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank22" onclick="javascript:poiselect(id)"
+                    >NC백화점 강서점 버스정류장</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank23" onclick="javascript:poiselect(id)"
+                    >NC백화점 강서점 정문</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank24" onclick="javascript:poiselect(id)"
+                    >홈플러스 가양점</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank25" onclick="javascript:poiselect(id)"
+                    >구암근린공원 근처 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank26" onclick="javascript:poiselect(id)"
+                    >공암나루공원 근처 자전거도로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank27" onclick="javascript:poiselect(id)"
+                    >발산역 1번출구</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank28" onclick="javascript:poiselect(id)"
+                    >안양천코스</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank29" onclick="javascript:poiselect(id)"
+                    >잠실역 교차로</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="all-rank30" onclick="javascript:poiselect(id)"
+                    >잠실역 10번출구</a
                   >
                 </li>
               </ol>
@@ -321,15 +494,7 @@
     </div>
 
     <div class="ifamap col-lg-12" id="ifamap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.57897992661157!2d127.13009279879157!3d37.51660052679466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cafc468f8986f%3A0x70073282c3f4ccaf!2z7YyM66as7YGs65287IOBIOyYrOumvO2UveqzteybkO2CpOy5nOygkA!5e0!3m2!1sko!2skr!4v1652208227962!5m2!1sko!2skr"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <img src="pariscroissant" width="600" height="450" />
     </div>
   </body>
   <iframe name="blackifr" style="display: none" ;></iframe>

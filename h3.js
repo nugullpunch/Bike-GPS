@@ -66,6 +66,28 @@ app.get("/main", (req, res) => {
     }
   });
 });
+app.get("/freenote", (req, res) => {
+  fs.readFile("./freenote.html", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/about", (req, res) => {
+  fs.readFile("./about.html", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
 app.get("/uber", (req, res) => {
   fs.readFile("uber.js", (err, data) => {
     if (err) {
@@ -197,7 +219,18 @@ app.get("/bikegps", (req, res) => {
     }
   });
 });
+app.get("/pariscroissant", (req, res) => {
+  fs.readFile("./poirec/pariscroissant.jpg", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
 
-server.listen(8756, function () {
+server.listen(80, function () {
   console.log("서버시작");
 });
