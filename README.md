@@ -48,7 +48,15 @@ node h3.js start
 이대로 나타내어도 좋은지 아니면 다른 뷰나 방법으로 나타낼 방법이 있는지 고민중입니다.
 
 ---
-화면스샷
-![Desktop Screenshot 2022 05 11 - 04 09 10 73](https://user-images.githubusercontent.com/64082500/167704557-be6fb483-53c8-4cd3-bba4-5f16d4278ecb.png)
-![Desktop Screenshot 2022 05 11 - 04 09 30 50](https://user-images.githubusercontent.com/64082500/167704572-ed7a9482-cbe2-432a-8468-8238efe7e24d.png)
 
+05/16 업데이트
+
+전체구, 강서구, 송파구 네이밍 입력 완료(활성은 아직)
+
+이제 bikegps.ga 에서 업데이트 상태를 확인할 수 있습니다.
+
+about페이지 추가(사진작업 필요)
+
+자유게시판 페이지 추가(아직 작업x)
+
+폰트추가
