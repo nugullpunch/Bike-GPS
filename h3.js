@@ -38,7 +38,7 @@ io.sockets.on("connection", (socket) => {
   //console.log(user[socket.id]);
 });
 app.get("/dbs", (req, res) => {
-  conn.query("SELECT * FROM `test1`", function (error, results, fields) {
+  conn.query("SELECT * FROM `review`", function (error, results, fields) {
     if (error) throw error;
     res.json(results);
     res.end();
@@ -208,6 +208,65 @@ app.post("/test", function (req, res) {
     }
   );
 });
+app.post("/addreview", function (req, res) {
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let date = today.getDate();
+  let day = "";
+  switch (today.getDay()) {
+    case 0:
+      day = "일";
+      break;
+    case 1:
+      day = "월";
+      break;
+    case 2:
+      day = "화";
+      break;
+    case 3:
+      day = "수";
+      break;
+    case 4:
+      day = "목";
+      break;
+    case 5:
+      day = "금";
+      break;
+    case 6:
+      day = "토";
+      break;
+    default:
+      day = " ";
+      break;
+  }
+
+  userinput = {
+    place: "",
+    review: "",
+    date: "",
+  };
+  let uplace = req.body.username;
+  let ureview = req.body.innertext;
+  let udate = year + "." + month + "." + date + " " + day;
+  userinput.place = uplace;
+  userinput.review = ureview;
+  userinput.date = udate;
+  //userint(userinput);
+  console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
+
+  conn.query(
+    "INSERT INTO test1(place,review,date) VALUES(?,?,?)",
+    [uplace, ureview, udate],
+    function (err, rows, fields) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(rows.name);
+      }
+    }
+  );
+});
 app.get("/bikegps", (req, res) => {
   fs.readFile("BIKEGPS.PNG", (err, data) => {
     if (err) {
@@ -221,6 +280,17 @@ app.get("/bikegps", (req, res) => {
 });
 app.get("/pariscroissant", (req, res) => {
   fs.readFile("./poirec/pariscroissant.jpg", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa1", (req, res) => {
+  fs.readFile("./송파따릉이/송파1.JPG", (err, data) => {
     if (err) {
       res.send("error");
     } else {

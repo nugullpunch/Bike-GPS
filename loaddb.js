@@ -1,7 +1,9 @@
 var jsonRepository = {};
 
-var id = [];
-var pw = [];
+var place = [];
+var username = [];
+var date = [];
+var reviewin = [];
 //json으로 받아오기
 $.ajax({
   url: "dbs",
@@ -13,8 +15,13 @@ $.ajax({
 
 function splitData() {
   for (var i = 0; i < jsonRepository.length; i++) {
-    id.push(jsonRepository[i]["place"]);
-    pw.push(jsonRepository[i]["PW"]);
+    place.push(jsonRepository[i]["place"]);
+    username.push(jsonRepository[i]["username"]);
+    date.push(jsonRepository[i]["date"]);
+    reviewin.push(jsonRepository[i]["reviewin"]);
   }
-  console.log(id);
+  // console.log(place);
+  // console.log(username);
+  // console.log(date);
+  // console.log(reviewin);
 }

@@ -251,7 +251,7 @@
               onclick="javascript:poidlocmoim(event)"
             />
             <label class="col-lg-4 btn btn-outline-success" for="moim">
-              모임 장소 추천
+              스트리트 뷰
             </label>
           </div>
         </div>
@@ -451,51 +451,10 @@
           </div>
         </div>
       </div>
-      <div id="map">
-        <form action="/test" method="POST">
-          <input
-            class="form-control"
-            type="text"
-            name="username"
-            placeholder="ID"
-            required
-            style="height: 50px"
-            target="blackifr"
-          />
-          <input
-            class="searchinput"
-            type="text"
-            name="innertext"
-            placeholder="리뷰"
-            required
-            autocomplete="off"
-            style="width: 550px; height: 50px"
-          />
-          <button
-            type="submit"
-            class="btn btn-outline-secondary"
-            style="width: 70px; height: 50px"
-          >
-            등록
-          </button>
-        </form>
-      </div>
     </div>
-    <div class="ifa col-lg-12" id="ifa">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!4v1651592189362!6m8!1m7!1scnMANXzGDyB4-pzmpuLPPg!2m2!1d37.55307498687083!2d126.8794596747501!3f208.29555416664593!4f0!5f0.7820865974627469"
-        width="900"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    <div class="ifa col-lg-12" id="ifa"></div>
 
-    <div class="ifamap col-lg-12" id="ifamap">
-      <img src="pariscroissant" width="600" height="450" />
-    </div>
+    <div class="ifamap col-lg-12" id="ifamap"></div>
   </body>
   <iframe name="blackifr" style="display: none" ;></iframe>
 </html>
