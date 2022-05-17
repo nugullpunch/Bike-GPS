@@ -384,7 +384,7 @@ function gangseo() {
     adda.setAttribute("href", "#");
     adda.setAttribute("id", aid); //
     adda.setAttribute("name", "gangseopoiselect");
-    adda.setAttribute("onclick", "javascript:gangseopoiselect(this.id)"); //id마다 접근할 예정
+    adda.setAttribute("onclick", "javascript:poiselect(this.id)"); //id마다 접근할 예정
     adda.innerHTML = innername[i];
     //li 아래에 a추가
     addli.appendChild(adda);
@@ -394,119 +394,7 @@ function gangseo() {
   //li추가한 ol추가
   document.getElementById("ranking").appendChild(addol);
 }
-function gangseopoiselect(gangseorank) {
-  //poi가 선택됐을 때 아래에 추가하는 부분
-  switch (gangseorank) {
-    case "gangseo-rank1": {
-      //태블로 뷰 갱신
-      src =
-        "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-      d3.select("#vizContainer>iframe").attr("src", src); //POI순위를 보여주겠다.
-      d3.selectAll("#ifa>*").remove(); //ifa초기화
-      var liinnertext = document.getElementById(gangseorank).innerText; //이름 가져오기
-      //console.log(liinnertext);
-      let ifatitle = document.createElement("h1");
-      ifatitle.setAttribute("style", "text-align:left");
-      ifatitle.innerText = liinnertext + "의 주변 뷰입니다.";
-      document.getElementById("ifa").appendChild(ifatitle);
-      const addiframe = document.createElement("iframe");
-      addiframe.setAttribute(
-        "src",
-        "https://www.google.com/maps/embed?pb=!4v1652075234391!6m8!1m7!1sCAoSK0FGMVFpcE5DLXotRjh5eHBHV20yZ2lFYVN4WU9rRUVnRWVIQ2hraG5aSW8.!2m2!1d37.5538853!2d126.8779857!3f221.8432973831338!4f-0.23894997855377653!5f0.7820865974627469"
-      );
-      addiframe.setAttribute("width", "80%");
-      addiframe.setAttribute("height", "450");
-      addiframe.setAttribute("style", "border:0");
-      addiframe.setAttribute("allowfullscreen", "");
-      addiframe.setAttribute("loading", "lazy");
-      addiframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-      document.getElementById("ifa").appendChild(addiframe);
 
-      d3.selectAll("#ifamap>*").remove(); //ifamap초기화
-      let ifamaptitle = document.createElement("h1");
-      ifamaptitle.innerText = "주변 모임 장소 추천";
-      document.getElementById("ifamap").appendChild(ifamaptitle);
-      //추천장소 1번
-      //a태그먼저
-      const poirecdiv = document.createElement("div");
-      const poirecatag = document.createElement("a");
-      poirecatag.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecatag.setAttribute("target", "_blank");
-      //이미지
-      const poirec = document.createElement("img");
-      poirec.setAttribute("src", "pariscroissant");
-      poirec.setAttribute("width", "450px");
-      poirec.setAttribute("height", "auto");
-      poirecatag.appendChild(poirec);
-      document.getElementById("ifamap").appendChild(poirecatag);
-      //한줄 띄우기
-      const brtag = document.createElement("br");
-      document.getElementById("ifamap").appendChild(brtag);
-      //추천장소 1번 제목
-      const poirecname = document.createElement("a");
-      poirecname.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecname.innerText = "파리크라상 올림픽공원점";
-      document.getElementById("ifamap").appendChild(poirecname);
-
-      //2번 추천장소
-      const poirecatag2 = document.createElement("a");
-      poirecatag.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/20662279?c=14152017.1199809,4511423.9272744,19,0,0,0,dh"
-      );
-      poirecatag2.setAttribute("target", "_blank");
-      //이미지
-      const poirec2 = document.createElement("img");
-      poirec2.setAttribute(
-        "src",
-        "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTExMjNfMjM0%2FMDAxNjM3NjQ0OTM4NzYz.b1EHV1M22cc-9wDNSdsxiNASzvquUUFxfx5UX1rlcRAg.sshRzhwGwXdAKDBsS8UFE7wvsPcXiH8iz3-Jqhg8kqAg.JPEG.hyun68%2F20211112_124036.jpg%234032x2268"
-      );
-      poirec2.setAttribute("width", "450px");
-      poirec2.setAttribute("height", "auto");
-      poirecatag2.appendChild(poirec2);
-      document.getElementById("ifamap").appendChild(poirecatag2);
-      //한줄 띄우기
-      const brtag2 = document.createElement("br");
-      document.getElementById("ifamap").appendChild(brtag2);
-      //추천장소 2번 제목
-      const poirecname2 = document.createElement("a");
-      poirecname2.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecname2.innerText = "올림픽공원 만남의광장";
-      document.getElementById("ifamap").appendChild(poirecname2);
-      break;
-    }
-    case "gangseo-rank2": {
-      d3.selectAll("#ifa>*").remove(); //랭킹목록 초기화
-      const addiframe = document.createElement("iframe");
-      addiframe.setAttribute(
-        "src",
-        "https://map.naver.com/v5/entry/place/20662279?c=14152017.1199809,4511423.9272744,19,0,0,0,dh"
-      );
-      addiframe.setAttribute("width", "600");
-      addiframe.setAttribute("height", "450");
-      addiframe.setAttribute("style", "border:0");
-      addiframe.setAttribute("allowfullscreen", "");
-      addiframe.setAttribute("loading", "lazy");
-      addiframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-      document.getElementById("ifa").appendChild(addiframe);
-
-      break;
-    }
-    default: {
-      console.log("ㄴㄴ");
-      break;
-    }
-  }
-}
 function songpa() {
   //순위 랭킹 바꾸기
   d3.selectAll("#ranking>*").remove(); //랭킹목록 초기화
@@ -557,7 +445,7 @@ function songpa() {
     adda.setAttribute("href", "#");
     adda.setAttribute("id", aid); //
     adda.setAttribute("name", "songpapoiselect");
-    adda.setAttribute("onclick", "javascript:songpapoiselect(this.id)"); //id마다 접근할 예정
+    adda.setAttribute("onclick", "javascript:poiselect(this.id)"); //id마다 접근할 예정
     adda.innerHTML = innername[i];
     //li 아래에 a추가
     addli.appendChild(adda);
@@ -567,139 +455,33 @@ function songpa() {
   //li추가한 ol추가
   document.getElementById("ranking").appendChild(addol);
 }
-function songpapoiselect(songparank) {
-  //poi가 선택됐을 때 아래에 추가하는 부분
-  switch (songparank) {
-    case "songpa-rank1": {
-      //태블로 뷰 갱신
-      src =
-        "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-      d3.select("#vizContainer>iframe").attr("src", src); //POI순위를 보여주겠다.
-      d3.selectAll("#ifa>*").remove(); //ifa초기화
-      var liinnertext = document.getElementById(songparank).innerText; //이름 가져오기
-      //console.log(liinnertext);
-      let ifatitle = document.createElement("h1");
-      ifatitle.setAttribute("style", "text-align:left");
-      ifatitle.innerText = liinnertext + "의 주변 뷰입니다.";
-      ioid = liinnertext; //ioid 할당
-      console.log(ioid);
-      document.getElementById("ifa").appendChild(ifatitle);
-      const addiframe = document.createElement("iframe");
-      addiframe.setAttribute(
-        "src",
-        "https://www.google.com/maps/embed?pb=!4v1652155452732!6m8!1m7!1sCAoSLEFGMVFpcE9yLVNfdFROTkdsUzFGNDAtYmQtenc2MmZDNUdfOVJ5aVd5bVoy!2m2!1d37.51667286888663!2d127.1304336190224!3f327.1603003870117!4f-14.357186019412126!5f0.7820865974627469"
-      );
-      addiframe.setAttribute("width", "80%");
-      addiframe.setAttribute("height", "450");
-      addiframe.setAttribute("style", "border:0");
-      addiframe.setAttribute("allowfullscreen", "");
-      addiframe.setAttribute("loading", "lazy");
-      addiframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-      document.getElementById("ifa").appendChild(addiframe);
 
-      d3.selectAll("#ifamap>*").remove(); //ifamap초기화
-      let ifamaptitle = document.createElement("h1");
-      ifamaptitle.innerText = "주변 모임 장소 추천";
-      document.getElementById("ifamap").appendChild(ifamaptitle);
-      //추천장소 1번
-      //a태그먼저
-      const poirecdiv = document.createElement("div");
-      const poirecatag = document.createElement("a");
-      poirecatag.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecatag.setAttribute("target", "_blank");
-      //이미지
-      const poirec = document.createElement("img");
-      poirec.setAttribute("src", "pariscroissant");
-      poirec.setAttribute("width", "450px");
-      poirec.setAttribute("height", "auto");
-      poirecatag.appendChild(poirec);
-      document.getElementById("ifamap").appendChild(poirecatag);
-      //한줄 띄우기
-      const brtag = document.createElement("br");
-      document.getElementById("ifamap").appendChild(brtag);
-      //추천장소 1번 제목
-      const poirecname = document.createElement("a");
-      poirecname.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecname.innerText = "파리크라상 올림픽공원점";
-      document.getElementById("ifamap").appendChild(poirecname);
-
-      //2번 추천장소
-      const poirecatag2 = document.createElement("a");
-      poirecatag.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/20662279?c=14152017.1199809,4511423.9272744,19,0,0,0,dh"
-      );
-      poirecatag2.setAttribute("target", "_blank");
-      //이미지
-      const poirec2 = document.createElement("img");
-      poirec2.setAttribute(
-        "src",
-        "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTExMjNfMjM0%2FMDAxNjM3NjQ0OTM4NzYz.b1EHV1M22cc-9wDNSdsxiNASzvquUUFxfx5UX1rlcRAg.sshRzhwGwXdAKDBsS8UFE7wvsPcXiH8iz3-Jqhg8kqAg.JPEG.hyun68%2F20211112_124036.jpg%234032x2268"
-      );
-      poirec2.setAttribute("width", "450px");
-      poirec2.setAttribute("height", "auto");
-      poirecatag2.appendChild(poirec2);
-      document.getElementById("ifamap").appendChild(poirecatag2);
-      //한줄 띄우기
-      const brtag2 = document.createElement("br");
-      document.getElementById("ifamap").appendChild(brtag2);
-      //추천장소 2번 제목
-      const poirecname2 = document.createElement("a");
-      poirecname2.setAttribute(
-        "href",
-        "https://map.naver.com/v5/entry/place/36547252?c=14151574.4691577,4511322.4146374,15,0,0,0,dh"
-      );
-      poirecname2.innerText = "올림픽공원 만남의광장";
-      document.getElementById("ifamap").appendChild(poirecname2);
-      break;
-    }
-    case "songpa-rank2": {
-      d3.selectAll("#ifa>*").remove(); //랭킹목록 초기화
-      const addiframe = document.createElement("iframe");
-      addiframe.setAttribute(
-        "src",
-        "https://map.naver.com/v5/entry/place/20662279?c=14152017.1199809,4511423.9272744,19,0,0,0,dh"
-      );
-      addiframe.setAttribute("width", "600");
-      addiframe.setAttribute("height", "450");
-      addiframe.setAttribute("style", "border:0");
-      addiframe.setAttribute("allowfullscreen", "");
-      addiframe.setAttribute("loading", "lazy");
-      addiframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-      document.getElementById("ifa").appendChild(addiframe);
-
-      break;
-    }
-    default: {
-      console.log("ㄴㄴ");
-      break;
-    }
-  }
-}
 function tablemaker(rplace, rusername, rdate, rreviewin) {
   for (let i = rusername.length - 1; i >= 0; i--) {
     //최신순
-    let row_2 = document.createElement("tr");
-    let row_2_data_1 = document.createElement("td");
-    row_2_data_1.innerHTML = rusername[i];
-    let row_2_data_2 = document.createElement("td");
-    row_2_data_2.innerHTML = rdate[i];
-    let row_2_data_3 = document.createElement("td");
-    row_2_data_3.innerHTML = rreviewin[i];
+    //유저,날짜부분
+    let uuser = document.createElement("div");
+    uuser.setAttribute("class", "ss");
+    uuser.setAttribute("style", "display:flex");
+    //유저
+    let uusername = document.createElement("div");
+    uusername.setAttribute("class", "uusername");
+    uusername.innerHTML = rusername[i];
+    //날짜
+    let uudate = document.createElement("div");
+    uudate.setAttribute("class", "uudate");
+    uudate.innerHTML = rdate[i];
 
-    // console.log(row_2_data_1);
-    // console.log(row_2_data_2);
-    // console.log(row_2_data_3);
-    row_2.appendChild(row_2_data_1);
-    row_2.appendChild(row_2_data_2);
-    row_2.appendChild(row_2_data_3);
-    document.getElementById("ifa").appendChild(row_2);
+    uuser.appendChild(uusername);
+    uuser.appendChild(uudate);
+    document.getElementById("ifa").appendChild(uuser);
+    //리뷰부분
+    let uureview = document.createElement("div");
+    uureview.innerHTML = rreviewin[i];
+    document.getElementById("ifa").appendChild(uureview);
+    //한줄 추가
+    const brtag = document.createElement("hr");
+    document.getElementById("ifa").appendChild(brtag);
   }
 }
 function reviewing(rplace) {
@@ -710,10 +492,61 @@ function reviewing(rplace) {
   const reviewform = document.createElement("form"); //form 생성
   reviewform.setAttribute("action", "/addreview"); //css용
   reviewform.setAttribute("method", "POST"); //css용
+  //reviewdiv.appendChild(reviewform);
+  //닉네임
+  const nickinput = document.createElement("input"); //input생성
+  nickinput.setAttribute("class", "reviewinput");
+  nickinput.setAttribute("type", "text");
+  nickinput.setAttribute("name", "username");
+  nickinput.setAttribute("placeholder", "닉네임");
+  nickinput.setAttribute("required", "");
+  nickinput.setAttribute("style", "height:50px");
+  reviewform.appendChild(nickinput);
+  //한줄 띄우기
+  const brtag = document.createElement("br");
+  reviewform.appendChild(brtag);
+  document.getElementById("ifa").appendChild(reviewdiv);
+  //리뷰 + 버튼그룹을 위한 div 생성
+  const reviewgroup = document.createElement("div");
+  reviewgroup.setAttribute("id", "rplace"); //
+  reviewgroup.setAttribute("name", rplace); //
 
+  //리뷰
   const reviewinput = document.createElement("input"); //input생성
   reviewinput.setAttribute("class", "reviewinput");
-  reviewinput.setAttribute("type");
+  reviewinput.setAttribute("type", "text");
+  reviewinput.setAttribute("name", "innertext");
+  reviewinput.setAttribute(
+    "placeholder",
+    rplace + "에 대한 리뷰를 남겨주세요."
+  );
+  reviewinput.setAttribute("required", "");
+  reviewinput.setAttribute("style", "height:200px;width:70%");
+  reviewgroup.appendChild(reviewinput); //group에 input삽입
+  //버튼
+  const reviewbutton = document.createElement("button");
+  reviewbutton.setAttribute("class", "searchbtn");
+  reviewbutton.setAttribute(
+    "style",
+    "width:15%;height:50px;max-width:200px;min-width:100px"
+  );
+  reviewbutton.innerHTML = "등록";
+  reviewgroup.appendChild(reviewbutton); //group에 button삽입
+
+  reviewform.appendChild(reviewgroup); //input과 button 그룹을 form에 붙이기
+  reviewdiv.appendChild(reviewform); //form을 최종 div에 붙이기
+  document.getElementById("ifa").appendChild(reviewdiv); //div 최종게시
+  //rplace를 넘길 필요가 있음(h3.js로)
+  var formr = document.createElement("form");
+  formr.setAttribute("method", "post");
+  formr.setAttribute("action", "/rplaces");
+  var hF = document.createElement("input");
+  hF.setAttribute("type", "hidden");
+  hF.setAttribute("name", "rplace");
+  hF.setAttribute("value", rplace);
+  formr.appendChild(hF);
+  document.body.appendChild(formr);
+  formr.submit();
 }
 function buttontableaureview(allrank) {
   //버튼 바꾸기

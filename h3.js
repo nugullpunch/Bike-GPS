@@ -17,17 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db_config = require("./database.js");
 const conn = db_config.init();
 
-// app.set("views", __dirname + "views");
-// app.set("view engine", "ejs");
-
-//var csvArray = []; //csv파일을 넣을 것임.
-// const ddID = []; //id
-// const ddseq = []; //sequence
-// const ddlat = []; //lat 좌표
-// const ddlon = []; //lon 좌표
 let user = {};
+var rplace = "";
 io.sockets.on("connection", (socket) => {
-  //현재 socket 연결이 안되는 문제 발생
+  //현재 socket 연결이 안되는 문제 발생 > 쓸 필요가 없어짐
   user[socket.id] = {
     id: "",
   };
@@ -208,6 +201,11 @@ app.post("/test", function (req, res) {
     }
   );
 });
+app.post("/rplaces", function (req, res) {
+  //console.log(req.body.rplace);
+  rplace = req.body.rplace;
+  //console.log(rplace);
+});
 app.post("/addreview", function (req, res) {
   let today = new Date();
   let year = today.getFullYear();
@@ -240,29 +238,32 @@ app.post("/addreview", function (req, res) {
       day = " ";
       break;
   }
+  //uber2.js에서 rplace를 받아와야함
 
   userinput = {
     place: "",
-    review: "",
+    username: "",
     date: "",
+    reviewin: "",
   };
-  let uplace = req.body.username;
+  let uusername = req.body.username;
+  let uplace = rplace;
   let ureview = req.body.innertext;
   let udate = year + "." + month + "." + date + " " + day;
+  userinput.username = uusername;
   userinput.place = uplace;
-  userinput.review = ureview;
+  userinput.reviewin = ureview;
   userinput.date = udate;
   //userint(userinput);
-  console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
-
+  //console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
   conn.query(
-    "INSERT INTO test1(place,review,date) VALUES(?,?,?)",
-    [uplace, ureview, udate],
+    "INSERT INTO review(place,username,date,reviewin) VALUES(?,?,?,?)",
+    [uplace, uusername, udate, ureview],
     function (err, rows, fields) {
       if (err) {
         console.log(err);
       } else {
-        console.log(rows.name);
+        //console.log(rows.name);
       }
     }
   );
