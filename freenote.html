@@ -173,7 +173,7 @@
     <nav class="navbar">
       <div class="navbar_logo">
         <img src="bikegps" width="60" />
-        <a href="">따릉이 핫 스팟</a>
+        <a href="main">따릉이 핫 스팟</a>
       </div>
 
       <ul class="navbar_menu">
@@ -186,7 +186,7 @@
       </a>
     </nav>
     <div id="map">
-      <form action="/test" method="POST">
+      <form action="/test" method="POST" target="iframe1">
         <input
           class="form-control"
           type="text"
@@ -194,7 +194,6 @@
           placeholder="ID"
           required
           style="height: 50px"
-          target="blackifr"
         />
         <input
           class="searchinput"
@@ -209,10 +208,12 @@
           type="submit"
           class="btn btn-outline-secondary"
           style="width: 70px; height: 50px"
+          onclick="javascript:his()"
         >
           등록
         </button>
       </form>
+      <iframe id="iframe1" name="iframe1" style="display: none"></iframe>
     </div>
   </body>
 </html>

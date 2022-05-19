@@ -4,16 +4,20 @@ var place = [];
 var username = [];
 var date = [];
 var reviewin = [];
-//json으로 받아오기
-$.ajax({
-  url: "dbs",
-  dataType: "json",
-}).done(function (result) {
-  jsonRepository = result;
-  splitData();
-});
+loaddata();
+function loaddata() {
+  //json으로 받아오기
+  $.ajax({
+    url: "dbs",
+    dataType: "json",
+  }).done(function (result) {
+    jsonRepository = result;
+    splitData();
+  });
+}
 
 function splitData() {
+  place = []; //초기화
   for (var i = 0; i < jsonRepository.length; i++) {
     place.push(jsonRepository[i]["place"]);
     username.push(jsonRepository[i]["username"]);
@@ -21,7 +25,7 @@ function splitData() {
     reviewin.push(jsonRepository[i]["reviewin"]);
   }
   // console.log(place);
-  // console.log(username);
+  //console.log(username);
   // console.log(date);
   // console.log(reviewin);
 }

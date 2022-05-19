@@ -14,9 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // const h3 = require("h3-js");
 
-const db_config = require("./database.js");
-const conn = db_config.init();
-
 let user = {};
 var rplace = "";
 io.sockets.on("connection", (socket) => {
@@ -31,6 +28,8 @@ io.sockets.on("connection", (socket) => {
   //console.log(user[socket.id]);
 });
 app.get("/dbs", (req, res) => {
+  var db_config = require("./database.js");
+  var conn = db_config.init();
   conn.query("SELECT * FROM `review`", function (error, results, fields) {
     if (error) throw error;
     res.json(results);
@@ -143,6 +142,8 @@ app.get("/map", (req, res) => {
   );
 });
 app.post("/test", function (req, res) {
+  var db_config = require("./database.js");
+  var conn = db_config.init();
   let today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
@@ -207,6 +208,8 @@ app.post("/rplaces", function (req, res) {
   //console.log(rplace);
 });
 app.post("/addreview", function (req, res) {
+  var db_config = require("./database.js");
+  var conn = db_config.init();
   let today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
@@ -292,6 +295,336 @@ app.get("/pariscroissant", (req, res) => {
 });
 app.get("/songpa1", (req, res) => {
   fs.readFile("./송파따릉이/송파1.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa1", (req, res) => {
+  fs.readFile("./송파따릉이/송파1.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa2", (req, res) => {
+  fs.readFile("./송파따릉이/송파2.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa3", (req, res) => {
+  fs.readFile("./송파따릉이/송파3.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa4", (req, res) => {
+  fs.readFile("./송파따릉이/송파4.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa5", (req, res) => {
+  fs.readFile("./송파따릉이/송파5.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa6", (req, res) => {
+  fs.readFile("./송파따릉이/송파6.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa7", (req, res) => {
+  fs.readFile("./송파따릉이/송파7.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa8", (req, res) => {
+  fs.readFile("./송파따릉이/송파8.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa9", (req, res) => {
+  fs.readFile("./송파따릉이/송파9.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa10", (req, res) => {
+  fs.readFile("./송파따릉이/송파10.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa11", (req, res) => {
+  fs.readFile("./송파따릉이/송파11.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa12", (req, res) => {
+  fs.readFile("./송파따릉이/송파12.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa13", (req, res) => {
+  fs.readFile("./송파따릉이/송파13.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa14", (req, res) => {
+  fs.readFile("./송파따릉이/송파14.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa15", (req, res) => {
+  fs.readFile("./송파따릉이/송파15.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa16", (req, res) => {
+  fs.readFile("./송파따릉이/송파16.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa17", (req, res) => {
+  fs.readFile("./송파따릉이/송파17.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa18", (req, res) => {
+  fs.readFile("./송파따릉이/송파18.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa19", (req, res) => {
+  fs.readFile("./송파따릉이/송파19.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa20", (req, res) => {
+  fs.readFile("./송파따릉이/송파20.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa21", (req, res) => {
+  fs.readFile("./송파따릉이/송파21.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa22", (req, res) => {
+  fs.readFile("./송파따릉이/송파22.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa23", (req, res) => {
+  fs.readFile("./송파따릉이/송파23.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa24", (req, res) => {
+  fs.readFile("./송파따릉이/송파24.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa25", (req, res) => {
+  fs.readFile("./송파따릉이/송파25.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa26", (req, res) => {
+  fs.readFile("./송파따릉이/송파26.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa27", (req, res) => {
+  fs.readFile("./송파따릉이/송파27.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa28", (req, res) => {
+  fs.readFile("./송파따릉이/송파28.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa29", (req, res) => {
+  fs.readFile("./송파따릉이/송파29.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/songpa30", (req, res) => {
+  fs.readFile("./송파따릉이/송파30.JPG", (err, data) => {
     if (err) {
       res.send("error");
     } else {
