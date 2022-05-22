@@ -1645,12 +1645,12 @@ function gangseo() {
     addol.appendChild(addli);
   }
   //li추가한 ol추가
-  document.getElementById("ranking").appendChild(addol);
+  document.getElementById("poi-ranking").appendChild(addol);
 }
 
 function songpa() {
   //순위 랭킹 바꾸기
-  d3.selectAll("#ranking>*").remove(); //랭킹목록 초기화
+  d3.selectAll("#poi-ranking>*").remove(); //랭킹목록 초기화
   //dt추가
   innername = [
     "올림픽공원역 3번출구",
@@ -1686,7 +1686,7 @@ function songpa() {
   ];
   const adddt = document.createElement("dt");
   adddt.appendChild(document.createTextNode("송파구 POI순위"));
-  document.getElementById("ranking").appendChild(adddt);
+  document.getElementById("poi-ranking").appendChild(adddt);
   //ol설정
   const addol = document.createElement("ol");
   //li추가(top 30개)
@@ -1706,7 +1706,7 @@ function songpa() {
     addol.appendChild(addli);
   }
   //li추가한 ol추가
-  document.getElementById("ranking").appendChild(addol);
+  document.getElementById("poi-ranking").appendChild(addol);
 }
 
 function tablemaker(rplace, rusername, rdate, rreviewin) {
@@ -1924,6 +1924,7 @@ function mainsearch() {
     }
     default: {
       alert("키워드에 대한 검색결과가 없습니다.");
+      break;
     }
   }
 }
