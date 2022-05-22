@@ -13,44 +13,16 @@ function poidlocmoim() {
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/source_16527093881440/Source?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
           console.log(ioid);
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          alert("장소를 선택해주십시오.");
+          dloc = document.getElementById("dloc");
+          dloc.checked = false;
         } else if (node.id == "moim") {
           //전체구 스트리트뷰는 없습니다.
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
@@ -69,44 +41,16 @@ function poidlocmoim() {
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/source_16527093881440/Source?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
           console.log(ioid);
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          alert("장소를 선택해주십시오.");
+          dloc = document.getElementById("dloc");
+          dloc.checked = false;
         } else if (node.id == "moim") {
           //강서구 전체 스트리트뷰는 없습니다.
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
@@ -125,44 +69,16 @@ function poidlocmoim() {
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/source_16527093881440/Source?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
           console.log(ioid);
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          alert("장소를 선택해주십시오.");
+          dloc = document.getElementById("dloc");
+          dloc.checked = false;
         } else if (node.id == "moim") {
           //송파구 전체 스트리트뷰는 없습니다.
           console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
@@ -181,22 +97,7 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/source_16527093881440/Source?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
           //console.log(ioid);
@@ -237,26 +138,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa1"); //사진 설정
@@ -293,26 +178,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa2"); //사진 설정
@@ -349,26 +218,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa3"); //사진 설정
@@ -405,26 +258,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa4"); //사진 설정
@@ -461,26 +298,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa5"); //사진 설정
@@ -517,26 +338,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa6"); //사진 설정
@@ -573,26 +378,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa7"); //사진 설정
@@ -629,26 +418,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa8"); //사진 설정
@@ -685,26 +458,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa9"); //사진 설정
@@ -741,26 +498,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa10"); //사진 설정
@@ -797,26 +538,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa11"); //사진 설정
@@ -853,26 +578,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa12"); //사진 설정
@@ -909,26 +618,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa13"); //사진 설정
@@ -965,26 +658,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa14"); //사진 설정
@@ -1021,26 +698,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa15"); //사진 설정
@@ -1077,26 +738,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa16"); //사진 설정
@@ -1133,26 +778,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa17"); //사진 설정
@@ -1189,26 +818,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa18"); //사진 설정
@@ -1245,26 +858,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa19"); //사진 설정
@@ -1301,26 +898,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa20"); //사진 설정
@@ -1357,26 +938,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa21"); //사진 설정
@@ -1413,26 +978,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa22"); //사진 설정
@@ -1469,26 +1018,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa23"); //사진 설정
@@ -1525,26 +1058,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa24"); //사진 설정
@@ -1581,26 +1098,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa25"); //사진 설정
@@ -1637,26 +1138,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa26"); //사진 설정
@@ -1693,26 +1178,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa27"); //사진 설정
@@ -1749,26 +1218,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa28"); //사진 설정
@@ -1805,26 +1258,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa29"); //사진 설정
@@ -1861,26 +1298,10 @@ function poidlocmoim() {
           //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
-          d3.select("#vizContainer>*").remove();
-          let tableaucontainer = document.createElement("iframe");
-          tableaucontainer.setAttribute("frameborder", "0");
-          tableaucontainer.setAttribute("allowtransparency", "true");
-          tableaucontainer.setAttribute("allowfullscreen", "true");
-          tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
-          tableaucontainer.setAttribute("marginheight", "0");
-          tableaucontainer.setAttribute("marginwidth", "0");
-          tableaucontainer.setAttribute("scrolling", "no");
-          tableaucontainer.setAttribute(
-            "style",
-            "display:block;width:100%;height:700px"
-          );
-          tableaucontainer.setAttribute("visibility", "visible");
-          tableaucontainer.setAttribute("src", src);
-          document.getElementById("vizContainer").appendChild(tableaucontainer);
+          maketableau(src);
         } else if (node.id == "dloc") {
           //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.select("#vizContainer>*").remove();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa30"); //사진 설정
@@ -1937,7 +1358,9 @@ function guselect(gu) {
 }
 function allgu() {
   //순위 랭킹 바꾸기
-  d3.selectAll("#ranking>*").remove(); //랭킹목록 초기화
+  d3.selectAll("#poi-ranking>*").remove(); //랭킹목록 초기화
+  d3.selectAll("#duration-ranking>*").remove(); //랭킹목록 초기화(duration-ranking 추가 필요)
+  d3.selectAll("#gps-ranking>*").remove(); //랭킹목록 초기화
   //dt추가
   innername = [
     "올림픽공원역 3번출구",
@@ -1973,7 +1396,7 @@ function allgu() {
   ];
   const adddt = document.createElement("dt");
   adddt.appendChild(document.createTextNode("전체구 POI순위"));
-  document.getElementById("ranking").appendChild(adddt);
+  document.getElementById("poi-ranking").appendChild(adddt);
   //ol설정
   const addol = document.createElement("ol");
   //li추가(top 30개)
@@ -1993,7 +1416,7 @@ function allgu() {
     addol.appendChild(addli);
   }
   //li추가한 ol추가
-  document.getElementById("ranking").appendChild(addol);
+  document.getElementById("poi-ranking").appendChild(addol);
 }
 function poiselect(allrank) {
   //poi가 선택됐을 때 아래에 추가하는 부분
@@ -2462,4 +1885,51 @@ function his() {
     //리뷰 달 수 있는 부분추가하기
     reviewing(liinnertext);
   }, 1650);
+}
+function maketableau(src) {
+  d3.select("#vizContainer>*").remove();
+  let tableaucontainer = document.createElement("iframe");
+  tableaucontainer.setAttribute("frameborder", "0");
+  tableaucontainer.setAttribute("allowtransparency", "true");
+  tableaucontainer.setAttribute("allowfullscreen", "true");
+  tableaucontainer.setAttribute("title", "데이터 비주얼리제이션");
+  tableaucontainer.setAttribute("marginheight", "0");
+  tableaucontainer.setAttribute("marginwidth", "0");
+  tableaucontainer.setAttribute("scrolling", "no");
+  tableaucontainer.setAttribute(
+    "style",
+    "display:block;width:100%;height:700px"
+  );
+  tableaucontainer.setAttribute("visibility", "visible");
+  tableaucontainer.setAttribute("src", src);
+  document.getElementById("vizContainer").appendChild(tableaucontainer);
+}
+function mainsearch() {
+  searchinput = document.getElementById("name").value; // 안에 넣은 value값 가져오기
+  switch (searchinput) {
+    case "올림픽":
+    case "올림픽공원역":
+    case "올림픽공원역 3번출구":
+    case "올림픽공원역3번출구": {
+      ioid = "songpa-rank1";
+      searchsetting(ioid);
+      break;
+    }
+    case "GS25 한강잠실4호점 자전거도로":
+    case "GS25 한강잠실4호점":
+    case "GS25한강잠실4호점": {
+      ioid = "songpa-rank2";
+      searchsetting(ioid);
+      break;
+    }
+    default: {
+      alert("키워드에 대한 검색결과가 없습니다.");
+    }
+  }
+}
+function searchsetting(ioid) {
+  songpa();
+  poidlocmoim();
+  poiselect(ioid);
+  $("#name").val("");
 }

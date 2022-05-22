@@ -61,7 +61,7 @@
         height: 700px;
       }
       #selc {
-        border: 1px solid #415462;
+        border: 1px solid #bbbbbb;
       }
       body {
         font-family: "NanumSquare";
@@ -168,8 +168,47 @@
       i {
         color: #5dba83;
       }
-      .ranking {
+      .poi-ranking {
         font-family: "MinSans-Medium";
+      }
+      .poi-ranking > dt {
+        font-size: 20px;
+        padding: 5px 5px;
+      }
+      .poi-ranking > dd > ol {
+        margin-left: 5px;
+      }
+      .poi-ranking > dd > ol > li {
+        padding: 1px 7px;
+        padding-right: 0px;
+      }
+      .duration-ranking {
+        font-family: "MinSans-Medium";
+      }
+      .duration-ranking > dt {
+        font-size: 20px;
+        padding: 5px 5px;
+      }
+      .duration-ranking > dd > ol {
+        margin-left: 5px;
+      }
+      .duration-ranking > dd > ol > li {
+        padding: 1px 7px;
+        padding-right: 0px;
+      }
+      .gps-ranking {
+        font-family: "MinSans-Medium";
+      }
+      .gps-ranking > dt {
+        font-size: 20px;
+        padding: 5px 5px;
+      }
+      .gps-ranking > dd > ol {
+        margin-left: 5px;
+      }
+      .gps-ranking > dd > ol > li {
+        padding: 1px 7px;
+        padding-right: 0px;
       }
       .selectbox {
         font-family: "MinSans-Medium";
@@ -239,6 +278,23 @@
       .uureview {
         margin-top: 5px;
         font-size: 16px;
+      }
+      .carousel-control-prev {
+        margin-top: 30px;
+        margin-left: 85%;
+        height: 15px;
+        width: 15px;
+      }
+      .carousel-control-prev-icon {
+        background-color: black;
+      }
+      .carousel-control-next {
+        margin-top: 30px;
+        height: 15px;
+        width: 15px;
+      }
+      .carousel-control-next-icon {
+        background-color: black;
       }
     </style>
   </head>
@@ -320,7 +376,7 @@
 
         <div class="col-lg-3" name="Searching">
           <div class="Searchs">
-            <form class="searchform">
+            <form class="searchform" method="post" target="blackifr">
               <input
                 class="inputsearch"
                 type="text"
@@ -331,6 +387,7 @@
               <button
                 class="btn btn-outline-secondary searchbtn"
                 style="width: 28%; height: 50px"
+                onclick="javascript:mainsearch();"
               >
                 <i class="fas fa-search"></i>
               </button>
@@ -343,32 +400,10 @@
         <div class="col-lg-9" id="vizContainer"></div>
         <div class="col-sm" id="selc">
           <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#myCarousel"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#myCarousel"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#myCarousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-
+            <!-- class 뒤 slide -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="ranking" id="ranking">
+                <div class="poi-ranking" id="poi-ranking">
                   <dt>POI 순위</dt>
                   <dd>
                     <ol>
@@ -617,7 +652,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="ranking" id="ranking">
+                <div class="duration-ranking" id="duration-ranking">
                   <dt>머문시간 순위</dt>
                   <dd>
                     <ol>
@@ -626,7 +661,7 @@
                           href="#"
                           id="all-rank1"
                           onclick="javascript:poiselect(id)"
-                          >올림픽공원역 3번출구</a
+                          >까치산로 14길 빌라촌</a
                         >
                       </li>
                       <li>
@@ -634,7 +669,7 @@
                           href="#"
                           id="all-rank2"
                           onclick="javascript:poiselect(id)"
-                          >GS25 한강잠실4호점 자전거도로</a
+                          >화곡 푸르지오 아파트</a
                         >
                       </li>
                       <li>
@@ -642,7 +677,7 @@
                           href="#"
                           id="all-rank3"
                           onclick="javascript:poiselect(id)"
-                          >안양천합수부 길목</a
+                          >강서 물재생센터</a
                         >
                       </li>
                       <li>
@@ -650,7 +685,7 @@
                           href="#"
                           id="all-rank4"
                           onclick="javascript:poiselect(id)"
-                          >여름캠핑장 자전거도로</a
+                          >강서 둘레길 3코스</a
                         >
                       </li>
                       <li>
@@ -658,7 +693,7 @@
                           href="#"
                           id="all-rank5"
                           onclick="javascript:poiselect(id)"
-                          >안양천합수부 중앙</a
+                          >수명산 근린공원</a
                         >
                       </li>
                       <li>
@@ -666,7 +701,7 @@
                           href="#"
                           id="all-rank6"
                           onclick="javascript:poiselect(id)"
-                          >발산역 6,7번출구</a
+                          >위례송파1로 개발지구</a
                         >
                       </li>
                       <li>
@@ -674,7 +709,7 @@
                           href="#"
                           id="all-rank7"
                           onclick="javascript:poiselect(id)"
-                          >수상관장 콜택시승간장 자전거도로</a
+                          >송파구 자원순환공원</a
                         >
                       </li>
                       <li>
@@ -682,7 +717,7 @@
                           href="#"
                           id="all-rank8"
                           onclick="javascript:poiselect(id)"
-                          >잠실마루쉼터 자전거도로</a
+                          >개화역 차량기지</a
                         >
                       </li>
                       <li>
@@ -690,7 +725,7 @@
                           href="#"
                           id="all-rank9"
                           onclick="javascript:poiselect(id)"
-                          >GS25 한강잠실2호점 자전거도로</a
+                          >강서 도로 사업소</a
                         >
                       </li>
                       <li>
@@ -698,7 +733,7 @@
                           href="#"
                           id="all-rank10"
                           onclick="javascript:poiselect(id)"
-                          >올림픽공원 평화의 광장</a
+                          >올림픽선수촌3단지아파트 어린이놀이터</a
                         >
                       </li>
                       <li>
@@ -706,7 +741,7 @@
                           href="#"
                           id="all-rank11"
                           onclick="javascript:poiselect(id)"
-                          >한강공원 잠실제1주차장 자전거도로</a
+                          >우장산 아이파크 어린이놀이터장</a
                         >
                       </li>
                       <li>
@@ -714,7 +749,7 @@
                           href="#"
                           id="all-rank12"
                           onclick="javascript:poiselect(id)"
-                          >잠실역 2번출구</a
+                          >한국공항공사 본사</a
                         >
                       </li>
                       <li>
@@ -722,7 +757,7 @@
                           href="#"
                           id="all-rank13"
                           onclick="javascript:poiselect(id)"
-                          >안양천합수부 자전거도로</a
+                          >잠실우성아파트 7동 앞</a
                         >
                       </li>
                       <li>
@@ -730,7 +765,7 @@
                           href="#"
                           id="all-rank14"
                           onclick="javascript:poiselect(id)"
-                          >화곡역 7번 출구</a
+                          >강서대학교 운동장</a
                         >
                       </li>
                       <li>
@@ -738,7 +773,7 @@
                           href="#"
                           id="all-rank15"
                           onclick="javascript:poiselect(id)"
-                          >올림픽공원프라자</a
+                          >강서구립 방화테니스장</a
                         >
                       </li>
                       <li>
@@ -746,7 +781,7 @@
                           href="#"
                           id="all-rank16"
                           onclick="javascript:poiselect(id)"
-                          >올림픽공원 세계평화의문</a
+                          >아라한강갑문 인증센터</a
                         >
                       </li>
                       <li>
@@ -754,7 +789,7 @@
                           href="#"
                           id="all-rank17"
                           onclick="javascript:poiselect(id)"
-                          >가양역 9번 출구</a
+                          >잠실우성아파트 3동 앞</a
                         >
                       </li>
                       <li>
@@ -762,7 +797,7 @@
                           href="#"
                           id="all-rank18"
                           onclick="javascript:poiselect(id)"
-                          >마곡역 교차로</a
+                          >서울교통공사 방화차량사업소</a
                         >
                       </li>
                       <li>
@@ -770,7 +805,7 @@
                           href="#"
                           id="all-rank19"
                           onclick="javascript:poiselect(id)"
-                          >올림픽공원 국기광장</a
+                          >위례서로 개발지구</a
                         >
                       </li>
                       <li>
@@ -778,7 +813,7 @@
                           href="#"
                           id="all-rank20"
                           onclick="javascript:poiselect(id)"
-                          >잠실역 7,8번 출구</a
+                          >까치산로 12길 빌라촌</a
                         >
                       </li>
                       <li>
@@ -786,7 +821,7 @@
                           href="#"
                           id="all-rank21"
                           onclick="javascript:poiselect(id)"
-                          >석촌역 교차로</a
+                          >거원중학교</a
                         >
                       </li>
                       <li>
@@ -794,7 +829,7 @@
                           href="#"
                           id="all-rank22"
                           onclick="javascript:poiselect(id)"
-                          >NC백화점 강서점 버스정류장</a
+                          >강서 주말농장</a
                         >
                       </li>
                       <li>
@@ -802,7 +837,7 @@
                           href="#"
                           id="all-rank23"
                           onclick="javascript:poiselect(id)"
-                          >NC백화점 강서점 정문</a
+                          >오금로 68길 빌라촌</a
                         >
                       </li>
                       <li>
@@ -810,7 +845,7 @@
                           href="#"
                           id="all-rank24"
                           onclick="javascript:poiselect(id)"
-                          >홈플러스 가양점</a
+                          >오륜테니스장</a
                         >
                       </li>
                       <li>
@@ -818,7 +853,7 @@
                           href="#"
                           id="all-rank25"
                           onclick="javascript:poiselect(id)"
-                          >구암근린공원 근처 자전거도로</a
+                          >가락시장 건어물가공처리장</a
                         >
                       </li>
                       <li>
@@ -826,7 +861,7 @@
                           href="#"
                           id="all-rank26"
                           onclick="javascript:poiselect(id)"
-                          >공암나루공원 근처 자전거도로</a
+                          >풍성초등학교</a
                         >
                       </li>
                       <li>
@@ -834,7 +869,7 @@
                           href="#"
                           id="all-rank27"
                           onclick="javascript:poiselect(id)"
-                          >발산역 1번출구</a
+                          >올림픽공원 야생화단지</a
                         >
                       </li>
                       <li>
@@ -842,7 +877,7 @@
                           href="#"
                           id="all-rank28"
                           onclick="javascript:poiselect(id)"
-                          >안양천코스</a
+                          >신천중학교</a
                         >
                       </li>
                       <li>
@@ -850,7 +885,7 @@
                           href="#"
                           id="all-rank29"
                           onclick="javascript:poiselect(id)"
-                          >잠실역 교차로</a
+                          >잠실우성4차아파트 105동 앞</a
                         >
                       </li>
                       <li>
@@ -858,7 +893,7 @@
                           href="#"
                           id="all-rank30"
                           onclick="javascript:poiselect(id)"
-                          >잠실역 10번출구</a
+                          >잠신고등학교</a
                         >
                       </li>
                     </ol>
@@ -866,7 +901,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="ranking" id="ranking">
+                <div class="gps-ranking" id="gps-ranking">
                   <dt>GPS 빈도순위</dt>
                   <dd>
                     <ol>
@@ -1122,10 +1157,7 @@
               data-bs-target="#myCarousel"
               data-bs-slide="prev"
             >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
+              <span class="carousel-control-prev-icon"></span>
               <span class="visually-hidden">Previous</span>
             </a>
             <a
