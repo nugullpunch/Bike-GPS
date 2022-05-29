@@ -36,6 +36,15 @@ app.get("/dbs", (req, res) => {
     res.end();
   });
 });
+app.get("/frdbs", (req, res) => {
+  var db_config = require("./database.js");
+  var conn = db_config.init();
+  conn.query("SELECT * FROM `freereview`", function (error, results, fields) {
+    if (error) throw error;
+    res.json(results);
+    res.end();
+  });
+});
 app.get("/", (req, res) => {
   fs.readFile("main.html", (err, data) => {
     if (err) {
@@ -141,7 +150,13 @@ app.get("/map", (req, res) => {
     }
   );
 });
-app.post("/test", function (req, res) {
+
+app.post("/rplaces", function (req, res) {
+  //console.log(req.body.rplace);
+  rplace = req.body.rplace;
+  //console.log(rplace);
+});
+app.post("/freereview", function (req, res) {
   var db_config = require("./database.js");
   var conn = db_config.init();
   let today = new Date();
@@ -175,37 +190,32 @@ app.post("/test", function (req, res) {
       day = " ";
       break;
   }
+  //uber2.js에서 rplace를 받아와야함
 
   userinput = {
-    place: "",
-    review: "",
+    username: "",
     date: "",
+    reviewin: "",
   };
-  let uplace = req.body.username;
+  let uusername = req.body.username;
   let ureview = req.body.innertext;
   let udate = year + "." + month + "." + date + " " + day;
-  userinput.place = uplace;
-  userinput.review = ureview;
+  userinput.username = uusername;
+  userinput.reviewin = ureview;
   userinput.date = udate;
   //userint(userinput);
-  console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
-
+  //console.log(userinput); //유저 입력 저장(장소, 리뷰, 날짜까지)
   conn.query(
-    "INSERT INTO test1(place,review,date) VALUES(?,?,?)",
-    [uplace, ureview, udate],
+    "INSERT INTO freereview(username,date,reviewin) VALUES(?,?,?)",
+    [uusername, udate, ureview],
     function (err, rows, fields) {
       if (err) {
         console.log(err);
       } else {
-        console.log(rows.name);
+        //console.log(rows.name);
       }
     }
   );
-});
-app.post("/rplaces", function (req, res) {
-  //console.log(req.body.rplace);
-  rplace = req.body.rplace;
-  //console.log(rplace);
 });
 app.post("/addreview", function (req, res) {
   var db_config = require("./database.js");
@@ -284,17 +294,6 @@ app.get("/bikegps", (req, res) => {
 });
 app.get("/pariscroissant", (req, res) => {
   fs.readFile("./poirec/pariscroissant.jpg", (err, data) => {
-    if (err) {
-      res.send("error");
-    } else {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(data);
-      res.end();
-    }
-  });
-});
-app.get("/songpa1", (req, res) => {
-  fs.readFile("./송파따릉이/송파1.JPG", (err, data) => {
     if (err) {
       res.send("error");
     } else {
@@ -625,6 +624,842 @@ app.get("/songpa29", (req, res) => {
 });
 app.get("/songpa30", (req, res) => {
   fs.readFile("./송파따릉이/송파30.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo1", (req, res) => {
+  fs.readFile("./강서따릉이/강서1.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo2", (req, res) => {
+  fs.readFile("./강서따릉이/강서2.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo3", (req, res) => {
+  fs.readFile("./강서따릉이/강서3.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo4", (req, res) => {
+  fs.readFile("./강서따릉이/강서4.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo5", (req, res) => {
+  fs.readFile("./강서따릉이/강서5.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo6", (req, res) => {
+  fs.readFile("./강서따릉이/강서6.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo7", (req, res) => {
+  fs.readFile("./강서따릉이/강서7.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo8", (req, res) => {
+  fs.readFile("./강서따릉이/강서8.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo9", (req, res) => {
+  fs.readFile("./강서따릉이/강서9.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo10", (req, res) => {
+  fs.readFile("./강서따릉이/강서10.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo11", (req, res) => {
+  fs.readFile("./강서따릉이/강서11.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo12", (req, res) => {
+  fs.readFile("./강서따릉이/강서12.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo13", (req, res) => {
+  fs.readFile("./강서따릉이/강서13.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo14", (req, res) => {
+  fs.readFile("./강서따릉이/강서14.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo15", (req, res) => {
+  fs.readFile("./강서따릉이/강서15.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo16", (req, res) => {
+  fs.readFile("./강서따릉이/강서16.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo17", (req, res) => {
+  fs.readFile("./강서따릉이/강서17.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo18", (req, res) => {
+  fs.readFile("./강서따릉이/강서18.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo19", (req, res) => {
+  fs.readFile("./강서따릉이/강서19.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo20", (req, res) => {
+  fs.readFile("./강서따릉이/강서20.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo21", (req, res) => {
+  fs.readFile("./강서따릉이/강서21.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo22", (req, res) => {
+  fs.readFile("./강서따릉이/강서22.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo23", (req, res) => {
+  fs.readFile("./강서따릉이/강서23.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo24", (req, res) => {
+  fs.readFile("./강서따릉이/강서24.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo25", (req, res) => {
+  fs.readFile("./강서따릉이/강서25.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo26", (req, res) => {
+  fs.readFile("./강서따릉이/강서26.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo27", (req, res) => {
+  fs.readFile("./강서따릉이/강서27.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo28", (req, res) => {
+  fs.readFile("./강서따릉이/강서28.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo29", (req, res) => {
+  fs.readFile("./강서따릉이/강서29.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/gangseo30", (req, res) => {
+  fs.readFile("./강서따릉이/강서30.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all1", (req, res) => {
+  fs.readFile("./전체따릉이/전체1.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all2", (req, res) => {
+  fs.readFile("./전체따릉이/전체2.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all3", (req, res) => {
+  fs.readFile("./전체따릉이/전체3.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all4", (req, res) => {
+  fs.readFile("./전체따릉이/전체4.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all5", (req, res) => {
+  fs.readFile("./전체따릉이/전체5.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all6", (req, res) => {
+  fs.readFile("./전체따릉이/전체6.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all7", (req, res) => {
+  fs.readFile("./전체따릉이/전체7.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all8", (req, res) => {
+  fs.readFile("./전체따릉이/전체8.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all9", (req, res) => {
+  fs.readFile("./전체따릉이/전체9.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all10", (req, res) => {
+  fs.readFile("./전체따릉이/전체10.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all11", (req, res) => {
+  fs.readFile("./전체따릉이/전체11.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all12", (req, res) => {
+  fs.readFile("./전체따릉이/전체12.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all13", (req, res) => {
+  fs.readFile("./전체따릉이/전체13.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all14", (req, res) => {
+  fs.readFile("./전체따릉이/전체14.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all15", (req, res) => {
+  fs.readFile("./전체따릉이/전체15.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all16", (req, res) => {
+  fs.readFile("./전체따릉이/전체16.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all17", (req, res) => {
+  fs.readFile("./전체따릉이/전체17.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all18", (req, res) => {
+  fs.readFile("./전체따릉이/전체18.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all19", (req, res) => {
+  fs.readFile("./전체따릉이/전체19.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all20", (req, res) => {
+  fs.readFile("./전체따릉이/전체20.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all21", (req, res) => {
+  fs.readFile("./전체따릉이/전체21.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all22", (req, res) => {
+  fs.readFile("./전체따릉이/전체22.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all23", (req, res) => {
+  fs.readFile("./전체따릉이/전체23.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all24", (req, res) => {
+  fs.readFile("./전체따릉이/전체24.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all25", (req, res) => {
+  fs.readFile("./전체따릉이/전체25.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all26", (req, res) => {
+  fs.readFile("./전체따릉이/전체26.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all27", (req, res) => {
+  fs.readFile("./전체따릉이/전체27.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all28", (req, res) => {
+  fs.readFile("./전체따릉이/전체28.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all29", (req, res) => {
+  fs.readFile("./전체따릉이/전체29.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/all30", (req, res) => {
+  fs.readFile("./전체따릉이/전체30.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa1", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파1.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa2", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파2.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa3", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파3.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa4", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파4.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa5", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파5.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa6", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파6.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa7", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파7.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa8", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파8.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa9", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파9.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa10", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파10.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa11", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파11.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa12", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파12.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa13", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파13.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa14", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파14.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/d-songpa15", (req, res) => {
+  fs.readFile("./머문자리송파/d-송파15.JPG", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/map3dmap", (req, res) => {
+  fs.readFile("./seoul_bike_h3_11.html", (err, data) => {
     if (err) {
       res.send("error");
     } else {
