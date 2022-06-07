@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Happiness-Sans-Title";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinSans-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #415462;
+  --accent-color: #5dba83;
+}
+#vizContainer {
+  height: 700px;
+  overflow: auto;
+}
+#selc {
+  border: 1px solid #bbbbbb;
+}
+body {
+  font-family: "NanumSquare";
+  padding-top: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: left;
+  text-align: left;
+  background: #f3f3f3;
+  padding: 8px 12px;
+}
+.navbar_logo {
+  font-family: "Happiness-Sans-Title";
+  font-size: 30px;
+  color: black;
+  margin-left: 10px;
+}
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  padding-left: 3%;
+  padding-top: 5px;
+}
+.navbar_menu li {
+  padding: 8px 16px;
+}
+.navbar_menu :hover {
+  background: #5dba83;
+  border-radius: 4px;
+}
+.navbar_togglebtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #5dba83;
+}
+@media screen and(max-width:768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_togglebtn {
+    display: block;
+  }
+  .navbar_menu.active {
+    display: flex;
+  }
+}
+.btn-check {
+  border-radius: 10px;
+}
+.btn {
+  font-size: 20px;
+}
+input {
+  outline: none;
+}
+#name {
+  height: 45px;
+  border: none;
+}
+.searchform {
+  font-family: "MinSans-Medium";
+  border-style: solid;
+  border-width: 1px;
+  border-color: #5dba83;
+  height: 50px;
+}
+.Searchs :focus-within {
+  border-width: 0.5px;
+  transition-duration: 1s;
+  border-radius: 50px;
+}
+.searchbtn {
+  border-radius: 50px;
+}
+i {
+  color: #5dba83;
+}
+.poi-ranking {
+  font-family: "MinSans-Medium";
+}
+.poi-ranking > dt {
+  font-size: 20px;
+  padding: 5px 5px;
+}
+.poi-ranking > dd > ol {
+  margin-left: 5px;
+}
+.poi-ranking > dd > ol > li {
+  padding: 1px 7px;
+  padding-right: 0px;
+}
+.duration-ranking {
+  font-family: "MinSans-Medium";
+}
+.duration-ranking > dt {
+  font-size: 20px;
+  padding: 5px 5px;
+}
+.duration-ranking > dd > ol {
+  margin-left: 5px;
+}
+.duration-ranking > dd > ol > li {
+  padding: 1px 7px;
+  padding-right: 0px;
+}
+.gps-ranking {
+  font-family: "MinSans-Medium";
+}
+.gps-ranking > dt {
+  font-size: 20px;
+  padding: 5px 5px;
+}
+.gps-ranking > dd > ol {
+  margin-left: 5px;
+}
+.gps-ranking > dd > ol > li {
+  padding: 1px 7px;
+  padding-right: 0px;
+}
+.selectbox {
+  font-family: "MinSans-Medium";
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 40px;
+  font-size: 19px;
+}
+.btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.ifa {
+  margin-top: 100px;
+}
+.ifamap {
+  margin-top: 100px;
+}
+.nickinput {
+  border: 0.7px solid #969696;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  height: 50px;
+  width: 300px;
+  padding-left: 15px;
+}
+.reviewinput {
+  width: 80%;
+  height: 190px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  padding-bottom: 80px;
+}
+.reviewinput:focus {
+  border: none;
+  outline: none;
+}
+#rplace {
+  height: 200px;
+  border: 2px solid #969696;
+  border-radius: 15px;
+}
+.reviewbtn {
+  position: absolute;
+  right: 15px;
+  margin-right: 15px;
+  border-radius: 2px;
+  width: 15%;
+  height: 50px;
+  max-width: 150px;
+  min-width: 100px;
+  margin-top: 130px;
+  border: 0.5px solid #e3e3e3;
+}
+.uusername {
+  font-size: 16px;
+  font-weight: 600;
+}
+.uudate {
+  margin-left: 10px;
+  color: #415462;
+  font-size: 10px;
+}
+.uureview {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.carousel-control-prev {
+  margin-top: 30px;
+  margin-left: 85%;
+  height: 15px;
+  width: 15px;
+}
+.carousel-control-prev-icon {
+  background-color: black;
+}
+.carousel-control-next {
+  margin-top: 30px;
+  height: 15px;
+  width: 15px;
+}
+.carousel-control-next-icon {
+  background-color: black;
+}
+.dirbutton {
+  position: absolute;
+  right: 180px;
+  top: 10px;
+}

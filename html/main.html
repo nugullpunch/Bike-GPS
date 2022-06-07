@@ -1,0 +1,713 @@
+<html>
+  <head>
+    <title>Bike GPS</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width = device-width, initial-scale = 1, minimum-scale=0.25"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b17d4fa9e7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="uber"></script>
+    <script src="uber2"></script>
+    <script src="loaddb"></script>
+    <script src="https://online.tableau.com/javascripts/api/tableau-2.6.0.min.js"></script>
+    <link rel="stylesheet" href="maincss" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="bikegps" width="60" />
+        <a href="main">따릉이 핫 스팟</a>
+      </div>
+
+      <ul class="navbar_menu">
+        <li><a href="">Home</a></li>
+        <li><a href="freenote" onclick="javascript:frhis()">자유게시판</a></li>
+        <li><a href="about">about</a></li>
+      </ul>
+      <a href="#" class="navbar_togglebtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
+
+    <div class="col-lg-11">
+      <div class="row">
+        <div class="col-lg-7">
+          <div
+            class="col-lg-12 btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="poi"
+              onclick="javascript:poidlocmoim(event)"
+              checked
+            />
+            <label class="col-lg-3 btn btn-outline-success" for="poi" id="asd">
+              핫스팟 주요경로
+            </label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="dloc"
+              onclick="javascript:poidlocmoim(event)"
+            />
+            <label class="col-lg-5 btn btn-outline-success" for="dloc">
+              따릉이 대여소 위치
+            </label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              autocomplete="off"
+              id="moim"
+              onclick="javascript:poidlocmoim(event)"
+            />
+            <label class="col-lg-4 btn btn-outline-success" for="moim">
+              스트리트 뷰
+            </label>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <select
+            class="form-select form-select-lg selectbox"
+            onchange="javascript:guselect(this.value)"
+            id=""
+          >
+            <option name="gus" selected value="전체구">전체구</option>
+            <option name="gus" value="강서구">강서구</option>
+            <option name="gus" value="송파구">송파구</option>
+          </select>
+        </div>
+
+        <div class="col-lg-3" name="Searching">
+          <div class="Searchs">
+            <form class="searchform" method="post" target="blackifr">
+              <input
+                class="inputsearch"
+                type="text"
+                id="name"
+                placeholder="POI검색"
+                style="width: 70%"
+              />
+              <button
+                class="btn btn-outline-secondary searchbtn"
+                style="width: 28%; height: 50px"
+                onclick="javascript:mainsearch();"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-9" id="vizContainer">
+          <div class="dirbutton btn-group-sm" role="group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="edir"
+              id="edgeweight"
+              autocomplete="off"
+              checked
+              onclick="javascript:edir(event)"
+            />
+            <label class="btn btn-outline-primary" for="edgeweight"
+              >연결선 강도</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="edir"
+              id="direction"
+              autocomplete="off"
+              onclick="javascript:edir(event)"
+            />
+            <label class="btn btn-outline-primary" for="direction">방향</label>
+          </div>
+        </div>
+        <div class="col-sm" id="selc">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- class 뒤 slide -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="poi-ranking" id="poi-ranking">
+                  <dt>POI 순위</dt>
+                  <dd>
+                    <ol>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank1"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원역 3번출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank2"
+                          onclick="javascript:poiselect(id)"
+                          >GS25 한강잠실4호점 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank3"
+                          onclick="javascript:poiselect(id)"
+                          >안양천합수부 길목</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank4"
+                          onclick="javascript:poiselect(id)"
+                          >여름캠핑장 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank5"
+                          onclick="javascript:poiselect(id)"
+                          >안양천합수부 중앙</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank6"
+                          onclick="javascript:poiselect(id)"
+                          >발산역 6,7번출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank7"
+                          onclick="javascript:poiselect(id)"
+                          >수상관장 콜택시승간장 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank8"
+                          onclick="javascript:poiselect(id)"
+                          >잠실마루쉼터 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank9"
+                          onclick="javascript:poiselect(id)"
+                          >GS25 한강잠실2호점 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank10"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원 평화의 광장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank11"
+                          onclick="javascript:poiselect(id)"
+                          >한강공원 잠실제1주차장 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank12"
+                          onclick="javascript:poiselect(id)"
+                          >잠실역 2번출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank13"
+                          onclick="javascript:poiselect(id)"
+                          >안양천합수부 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank14"
+                          onclick="javascript:poiselect(id)"
+                          >화곡역 7번 출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank15"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원프라자</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank16"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원 세계평화의문</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank17"
+                          onclick="javascript:poiselect(id)"
+                          >가양역 9번 출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank18"
+                          onclick="javascript:poiselect(id)"
+                          >마곡역 교차로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank19"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원 국기광장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank20"
+                          onclick="javascript:poiselect(id)"
+                          >잠실역 7,8번 출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank21"
+                          onclick="javascript:poiselect(id)"
+                          >석촌역 교차로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank22"
+                          onclick="javascript:poiselect(id)"
+                          >NC백화점 강서점 버스정류장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank23"
+                          onclick="javascript:poiselect(id)"
+                          >NC백화점 강서점 정문</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank24"
+                          onclick="javascript:poiselect(id)"
+                          >홈플러스 가양점</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank25"
+                          onclick="javascript:poiselect(id)"
+                          >구암근린공원 근처 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank26"
+                          onclick="javascript:poiselect(id)"
+                          >공암나루공원 근처 자전거도로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank27"
+                          onclick="javascript:poiselect(id)"
+                          >발산역 1번출구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank28"
+                          onclick="javascript:poiselect(id)"
+                          >안양천코스</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank29"
+                          onclick="javascript:poiselect(id)"
+                          >잠실역 교차로</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="all-rank30"
+                          onclick="javascript:poiselect(id)"
+                          >잠실역 10번출구</a
+                        >
+                      </li>
+                    </ol>
+                  </dd>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="duration-ranking" id="duration-ranking">
+                  <dt>머문시간 순위</dt>
+                  <dd>
+                    <ol>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank1"
+                          onclick="javascript:poiselect(id)"
+                          >까치산로 14길 빌라촌</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank2"
+                          onclick="javascript:poiselect(id)"
+                          >화곡 푸르지오 아파트</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank3"
+                          onclick="javascript:poiselect(id)"
+                          >강서 물재생센터</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank4"
+                          onclick="javascript:poiselect(id)"
+                          >강서 둘레길 3코스</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank5"
+                          onclick="javascript:poiselect(id)"
+                          >수명산 근린공원</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank6"
+                          onclick="javascript:poiselect(id)"
+                          >위례송파1로 개발지구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank7"
+                          onclick="javascript:poiselect(id)"
+                          >송파구 자원순환공원</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank8"
+                          onclick="javascript:poiselect(id)"
+                          >개화역 차량기지</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank9"
+                          onclick="javascript:poiselect(id)"
+                          >강서 도로 사업소</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank10"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽선수촌3단지아파트 어린이놀이터</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank11"
+                          onclick="javascript:poiselect(id)"
+                          >우장산 아이파크 어린이놀이터장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank12"
+                          onclick="javascript:poiselect(id)"
+                          >한국공항공사 본사</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank13"
+                          onclick="javascript:poiselect(id)"
+                          >잠실우성아파트 7동 앞</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank14"
+                          onclick="javascript:poiselect(id)"
+                          >강서대학교 운동장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-d-all-rank15"
+                          onclick="javascript:poiselect(id)"
+                          >강서구립 방화테니스장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank16"
+                          onclick="javascript:poiselect(id)"
+                          >아라한강갑문 인증센터</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank17"
+                          onclick="javascript:poiselect(id)"
+                          >잠실우성아파트 3동 앞</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank18"
+                          onclick="javascript:poiselect(id)"
+                          >서울교통공사 방화차량사업소</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank19"
+                          onclick="javascript:poiselect(id)"
+                          >위례서로 개발지구</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank20"
+                          onclick="javascript:poiselect(id)"
+                          >까치산로 12길 빌라촌</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank21"
+                          onclick="javascript:poiselect(id)"
+                          >거원중학교</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank22"
+                          onclick="javascript:poiselect(id)"
+                          >강서 주말농장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank23"
+                          onclick="javascript:poiselect(id)"
+                          >오금로 68길 빌라촌</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank24"
+                          onclick="javascript:poiselect(id)"
+                          >오륜테니스장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank25"
+                          onclick="javascript:poiselect(id)"
+                          >가락시장 건어물가공처리장</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank26"
+                          onclick="javascript:poiselect(id)"
+                          >풍성초등학교</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank27"
+                          onclick="javascript:poiselect(id)"
+                          >올림픽공원 야생화단지</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank28"
+                          onclick="javascript:poiselect(id)"
+                          >신천중학교</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank29"
+                          onclick="javascript:poiselect(id)"
+                          >잠실우성4차아파트 105동 앞</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          id="d-all-rank30"
+                          onclick="javascript:poiselect(id)"
+                          >잠신고등학교</a
+                        >
+                      </li>
+                    </ol>
+                  </dd>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ifa col-lg-12" id="ifa">
+      <a href="map3dmap">3D맵으로 보기</a>
+    </div>
+    <div class="ifamap col-lg-12" id="ifamap"></div>
+  </body>
+  <iframe name="blackifr" style="display: none" ;></iframe>
+</html>
+
+<script>
+  var containerDiv = document.getElementById("vizContainer"),
+    url =
+      "https://public.tableau.com/views/200_16538982504110/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link";
+  //태블로 한거 가져올 필요 존재
+  var viz = new tableau.Viz(containerDiv, url);
+</script>
