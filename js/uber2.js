@@ -7500,6 +7500,446 @@ function mainsearch() {
       searchsetting(ioid);
       break;
     }
+    case "여름캠핑장 자전거도로": {
+      ioid = "songpa-rank3";
+      searchsetting(ioid);
+      break;
+    }
+    case "수상관장 콜택시승간장 자전거도로": {
+      ioid = "songpa-rank4";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실마루쉼터 자전거도로": {
+      ioid = "songpa-rank5";
+      searchsetting(ioid);
+      break;
+    }
+    case "GS25 한강잠실2호점 자전거도로": {
+      ioid = "songpa-rank6";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 평화의 광장": {
+      ioid = "songpa-rank7";
+      searchsetting(ioid);
+      break;
+    }
+    case "한강공원 잠실제1주차장 자전거도로": {
+      ioid = "songpa-rank8";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실역 2번출구": {
+      ioid = "songpa-rank9";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원프라자": {
+      ioid = "songpa-rank10";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 세계평화의문": {
+      ioid = "songpa-rank11";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 국기광장": {
+      ioid = "songpa-rank12";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실역 7,8번 출구": {
+      ioid = "songpa-rank13";
+      searchsetting(ioid);
+      break;
+    }
+    case "석촌역 교차로": {
+      ioid = "songpa-rank14";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실역 교차로": {
+      ioid = "songpa-rank15";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실역 10번출구": {
+      ioid = "songpa-rank16";
+      searchsetting(ioid);
+      break;
+    }
+    case "더컨벤션 잠실점 교차로": {
+      ioid = "songpa-rank17";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실한강공원앞 교차로": {
+      ioid = "songpa-rank18";
+      searchsetting(ioid);
+      break;
+    }
+    case "정국숲3호 자전거도로": {
+      ioid = "songpa-rank19";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 한얼광장": {
+      ioid = "songpa-rank20";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 북2문입구": {
+      ioid = "songpa-rank21";
+      searchsetting(ioid);
+      break;
+    }
+    case "방이맛골": {
+      ioid = "songpa-rank22";
+      searchsetting(ioid);
+      break;
+    }
+    case "몽촌토성역 1번출구": {
+      ioid = "songpa-rank23";
+      searchsetting(ioid);
+      break;
+    }
+    case "방이삼거리": {
+      ioid = "songpa-rank24";
+      searchsetting(ioid);
+      break;
+    }
+    case "종합운동장사거리": {
+      ioid = "songpa-rank25";
+      searchsetting(ioid);
+      break;
+    }
+    case "한성백제역 2번출구": {
+      ioid = "songpa-rank26";
+      searchsetting(ioid);
+      break;
+    }
+    case "GS25 한강잠실1호점 자전거도로": {
+      ioid = "songpa-rank27";
+      searchsetting(ioid);
+      break;
+    }
+    case "석촌호수 (남쪽)": {
+      ioid = "songpa-rank28";
+      searchsetting(ioid);
+      break;
+    }
+    case "송파근린공원 교차로": {
+      ioid = "songpa-rank29";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실새내역 2번출구": {
+      ioid = "songpa-rank30";
+      searchsetting(ioid);
+      break;
+    }
+    case "안양천합수부 길목": {
+      ioid = "gangseo-rank1";
+      searchsetting(ioid);
+      break;
+    }
+    case "안양천합수부 중앙": {
+      ioid = "gangseo-rank2";
+      searchsetting(ioid);
+      break;
+    }
+    case "발산역 6,7번출구": {
+      ioid = "gangseo-rank3";
+      searchsetting(ioid);
+      break;
+    }
+    case "안양천합수부 자전거도로": {
+      ioid = "gangseo-rank4";
+      searchsetting(ioid);
+      break;
+    }
+    case "화곡역 7번 출구": {
+      ioid = "gangseo-rank5";
+      searchsetting(ioid);
+      break;
+    }
+    case "가양역 9번 출구": {
+      ioid = "gangseo-rank6";
+      searchsetting(ioid);
+      break;
+    }
+    case "마곡역 교차로": {
+      ioid = "gangseo-rank7";
+      searchsetting(ioid);
+      break;
+    }
+    case "NC백화점 강서점 버스정류장": {
+      ioid = "gangseo-rank8";
+      searchsetting(ioid);
+      break;
+    }
+    case "NC백화점 강서점 정문": {
+      ioid = "gangseo-rank9";
+      searchsetting(ioid);
+      break;
+    }
+    case "홈플러스 가양점": {
+      ioid = "gangseo-rank10";
+      searchsetting(ioid);
+      break;
+    }
+    case "구암근린공원 근처 자전거도로": {
+      ioid = "gangseo-rank11";
+      searchsetting(ioid);
+      break;
+    }
+    case "공암나루공원 근처 자전거도로": {
+      ioid = "gangseo-rank12";
+      searchsetting(ioid);
+      break;
+    }
+    case "발산역 1번출구": {
+      ioid = "gangseo-rank13";
+      searchsetting(ioid);
+      break;
+    }
+    case "안양천코스": {
+      ioid = "gangseo-rank14";
+      searchsetting(ioid);
+      break;
+    }
+    case "LG유플러스 마곡사옥 앞": {
+      ioid = "gangseo-rank15";
+      searchsetting(ioid);
+      break;
+    }
+    case "증미역 3번출구": {
+      ioid = "gangseo-rank16";
+      searchsetting(ioid);
+      break;
+    }
+    case "염창나들목": {
+      ioid = "gangseo-rank17";
+      searchsetting(ioid);
+      break;
+    }
+    case "염창교 자전거도로": {
+      ioid = "gangseo-rank18";
+      searchsetting(ioid);
+      break;
+    }
+    case "황금내근린공원 근처 자전거도로": {
+      ioid = "gangseo-rank19";
+      searchsetting(ioid);
+      break;
+    }
+    case "등촌역 중앙": {
+      ioid = "gangseo-rank20";
+      searchsetting(ioid);
+      break;
+    }
+    case "스타벅스 발산역점": {
+      ioid = "gangseo-rank21";
+      searchsetting(ioid);
+      break;
+    }
+    case "우장산역 2번출구": {
+      ioid = "gangseo-rank22";
+      searchsetting(ioid);
+      break;
+    }
+    case "발산근린공원 교차로": {
+      ioid = "gangseo-rank23";
+      searchsetting(ioid);
+      break;
+    }
+    case "개화나들목 근처 자전거도로": {
+      ioid = "gangseo-rank24";
+      searchsetting(ioid);
+      break;
+    }
+    case "마곡나루역 1번출구": {
+      ioid = "gangseo-rank25";
+      searchsetting(ioid);
+      break;
+    }
+    case "미니스톱 발산역점": {
+      ioid = "gangseo-rank26";
+      searchsetting(ioid);
+      break;
+    }
+    case "양천향교역 6번출구": {
+      ioid = "gangseo-rank27";
+      searchsetting(ioid);
+      break;
+    }
+    case "버거킹 마곡점": {
+      ioid = "gangseo-rank28";
+      searchsetting(ioid);
+      break;
+    }
+    case "한국가스기술공사(발산역방면)": {
+      ioid = "gangseo-rank29";
+      searchsetting(ioid);
+      break;
+    }
+    case "명덕고교입구교차로": {
+      ioid = "gangseo-rank30";
+      searchsetting(ioid);
+      break;
+    }
+    case "위례송파1로 개발지구": {
+      ioid = "d-songpa-rank1";
+      searchsetting(ioid);
+      break;
+    }
+    case "송파구 자원순환공원": {
+      ioid = "d-songpa-rank2";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽선수촌3단지아파트 어린이놀이터": {
+      ioid = "d-songpa-rank3";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실우성아파트 7동 앞": {
+      ioid = "d-songpa-rank4";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실우성아파트 3동 앞": {
+      ioid = "d-songpa-rank5";
+      searchsetting(ioid);
+      break;
+    }
+    case "위례서로 개발지구": {
+      ioid = "d-songpa-rank6";
+      searchsetting(ioid);
+      break;
+    }
+    case "거원중학교": {
+      ioid = "d-songpa-rank7";
+      searchsetting(ioid);
+      break;
+    }
+    case "오금로 68길 빌라촌": {
+      ioid = "d-songpa-rank8";
+      searchsetting(ioid);
+      break;
+    }
+    case "오륜테니스장": {
+      ioid = "d-songpa-rank9";
+      searchsetting(ioid);
+      break;
+    }
+    case "가락시장 건어물가공처리장": {
+      ioid = "d-songpa-rank10";
+      searchsetting(ioid);
+      break;
+    }
+    case "풍성초등학교": {
+      ioid = "d-songpa-rank11";
+      searchsetting(ioid);
+      break;
+    }
+    case "올림픽공원 야생화단지": {
+      ioid = "d-songpa-rank12";
+      searchsetting(ioid);
+      break;
+    }
+    case "신천중학교": {
+      ioid = "d-songpa-rank13";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠실우성4차아파트 105동 앞": {
+      ioid = "d-songpa-rank14";
+      searchsetting(ioid);
+      break;
+    }
+    case "잠신고등학교": {
+      ioid = "d-songpa-rank15";
+      searchsetting(ioid);
+      break;
+    }
+    case "까치산로 14길 빌라촌": {
+      ioid = "d-gangseo-rank1";
+      searchsetting(ioid);
+      break;
+    }
+    case "화곡 푸르지오 아파트": {
+      ioid = "d-gangseo-rank2";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서 물재생센터": {
+      ioid = "d-gangseo-rank3";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서 둘레길 3코스": {
+      ioid = "d-gangseo-rank4";
+      searchsetting(ioid);
+      break;
+    }
+    case "수명산 근린공원": {
+      ioid = "d-gangseo-rank5";
+      searchsetting(ioid);
+      break;
+    }
+    case "개화역 차량기지": {
+      ioid = "d-gangseo-rank6";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서 도로 사업소": {
+      ioid = "d-gangseo-rank7";
+      searchsetting(ioid);
+      break;
+    }
+    case "우장산 아이파크 어린이놀이터": {
+      ioid = "d-gangseo-rank8";
+      searchsetting(ioid);
+      break;
+    }
+    case "한국공항공사 본사": {
+      ioid = "d-gangseo-rank9";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서대학교 운동장": {
+      ioid = "d-gangseo-rank10";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서구립 방화테니스장": {
+      ioid = "d-gangseo-rank11";
+      searchsetting(ioid);
+      break;
+    }
+    case "아라한강갑문 인증센터": {
+      ioid = "d-gangseo-rank12";
+      searchsetting(ioid);
+      break;
+    }
+    case "서울교통공사 방화차량사업소": {
+      ioid = "d-gangseo-rank13";
+      searchsetting(ioid);
+      break;
+    }
+    case "까치산로 12길 빌라촌": {
+      ioid = "d-gangseo-rank14";
+      searchsetting(ioid);
+      break;
+    }
+    case "강서 주말농장": {
+      ioid = "d-gangseo-rank15";
+      searchsetting(ioid);
+      break;
+    }
     default: {
       alert("키워드에 대한 검색결과가 없습니다.");
       break;
@@ -7576,7 +8016,7 @@ $(function () {
 });
 
 function searchsetting(ioid) {
-  songpa();
+  allgu();
   poidlocmoim();
   poiselect(ioid);
   edir();
