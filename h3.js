@@ -336,6 +336,17 @@ app.get("/pariscroissant", (req, res) => {
     }
   });
 });
+app.get("/whatisthis", (req, res) => {
+  fs.readFile("./poirec/whatisthis.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
 app.get("/visualpoi", (req, res) => {
   fs.readFile("./poirec/visualpoi.png", (err, data) => {
     if (err) {
@@ -371,6 +382,28 @@ app.get("/uberh3", (req, res) => {
 });
 app.get("/tableau", (req, res) => {
   fs.readFile("./poirec/tableau.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/hotspotloc", (req, res) => {
+  fs.readFile("./poirec/hotspotloc.png", (err, data) => {
+    if (err) {
+      res.send("error");
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    }
+  });
+});
+app.get("/rentloc", (req, res) => {
+  fs.readFile("./poirec/rentloc.png", (err, data) => {
     if (err) {
       res.send("error");
     } else {

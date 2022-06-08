@@ -20,6 +20,7 @@
   --accent-color: #5dba83;
 }
 #vizContainer {
+  position: relative;
   height: 700px;
   overflow: auto;
 }
@@ -262,4 +263,22 @@ i {
   position: absolute;
   right: 180px;
   top: 10px;
+}
+#tool {
+  width: 24px;
+  height: 24px;
+  margin-top: -5px;
+}
+.dlocinfo {
+  font-family: "MinSans-Medium";
+  position: absolute;
+  width: 130px;
+  height: 85px;
+  background-color: white;
+  top: 0px;
+  right: 0px;
+  font-size: 18px;
+}
+.dlocinfo_img {
+  width: 30px;
 }

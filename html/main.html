@@ -173,7 +173,11 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="poi-ranking" id="poi-ranking">
-                  <dt>POI 순위</dt>
+                  <dt>
+                    POI 순위
+                    <img id="tool" src="whatisthis" />
+                  </dt>
+
                   <dd>
                     <ol>
                       <li>
@@ -697,7 +701,7 @@
       </div>
     </div>
     <div class="ifa col-lg-12" id="ifa">
-      <a href="map3dmap">3D맵으로 보기</a>
+      <a href="map3dmap">3D맵으로 보기(페이지가 이동됩니다.)</a>
     </div>
     <div class="ifamap col-lg-12" id="ifamap"></div>
   </body>
@@ -705,6 +709,7 @@
 </html>
 
 <script>
+  poiiswhat();
   var containerDiv = document.getElementById("vizContainer"),
     url =
       "https://public.tableau.com/views/200_16538982504110/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link";

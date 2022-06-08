@@ -22,9 +22,6 @@
 #vizContainer {
   height: 700px;
 }
-#selc {
-  border: 1px solid #bbbbbb;
-}
 body {
   font-family: "NanumSquare";
   padding-top: 20px;
@@ -348,4 +345,9 @@ h3 {
 h4 {
   font-family: "NanumSquare";
   line-height: 23px;
+}
+#tool {
+  width: 28px;
+  height: 28px;
+  margin-top: -10px;
 }

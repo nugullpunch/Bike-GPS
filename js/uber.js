@@ -1,5 +1,3 @@
-//freenote에 대한 js
-
 function frhis() {
   //데이터베이스 새로고침
 

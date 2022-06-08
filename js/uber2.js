@@ -1,3 +1,4 @@
+poiiswhat(); //poi설명서
 //&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse
 var ioid = "전체구"; //어떤 id에 접근했었는지 표시하기위한 ioid, 아래에서 값 선언될 것임.
 function poidlocmoim() {
@@ -9,15 +10,12 @@ function poidlocmoim() {
         //ioid가 전체구일 때
         if (node.id == "poi") {
           //poi지점 파악
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/200_16538982504110/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
           d3.select("dirbutton").style("visibility", "visible");
         } else if (node.id == "dloc") {
           //대여소위치파악
-          console.log(ioid);
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/shared/PH9SPCY5Z?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("장소를 선택해주십시오.");
@@ -25,7 +23,6 @@ function poidlocmoim() {
           dloc.checked = false;
         } else if (node.id == "moim") {
           //전체구 스트리트뷰는 없습니다.
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/Network2_16514805636400/2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("전체구에는 스트리트뷰가 없습니다.");
@@ -38,15 +35,12 @@ function poidlocmoim() {
         //ioid가 강서구일 때
         if (node.id == "poi") {
           //poi지점 파악
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/gangseo/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
           d3.select("dirbutton").style("visibility", "visible");
         } else if (node.id == "dloc") {
           //대여소위치파악
-          console.log(ioid);
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/gangseo/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("장소를 선택해주십시오.");
@@ -54,7 +48,6 @@ function poidlocmoim() {
           dloc.checked = false;
         } else if (node.id == "moim") {
           //강서구 전체 스트리트뷰는 없습니다.
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/gangseo/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("강서구 전체는 스트리트뷰가 없습니다.");
@@ -66,16 +59,13 @@ function poidlocmoim() {
       if (node.checked && ioid == "송파구") {
         //ioid가 송파구일 때
         if (node.id == "poi") {
-          //poi지점 파악
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
           src =
             "https://public.tableau.com/views/songpa/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
           d3.select("dirbutton").style("visibility", "visible");
         } else if (node.id == "dloc") {
           //대여소위치파악
-          console.log(ioid);
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/songpa/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("장소를 선택해주십시오.");
@@ -83,7 +73,7 @@ function poidlocmoim() {
           dloc.checked = false;
         } else if (node.id == "moim") {
           //송파구 전체 스트리트뷰는 없습니다.
-          console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/songpa/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           alert("송파구 전체는 스트리트뷰가 없습니다.");
@@ -102,10 +92,9 @@ function poidlocmoim() {
           d3.select("dirbutton").style("visibility", "visible");
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -147,6 +136,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -185,6 +175,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -223,6 +214,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -261,6 +253,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -299,6 +292,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -337,6 +331,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -375,6 +370,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -413,6 +409,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -451,6 +448,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -489,6 +487,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -527,6 +526,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -565,6 +565,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -603,6 +604,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -641,6 +643,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -679,6 +682,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all16"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -717,6 +721,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all17"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -755,6 +760,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all18"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -793,6 +799,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all19"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -831,6 +838,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all20"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -869,6 +877,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all21"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -907,6 +916,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all22"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -945,6 +955,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all23"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -983,6 +994,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all24"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1021,6 +1033,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all25"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1059,6 +1072,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all26"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1097,6 +1111,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all27"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1135,6 +1150,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all28"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1173,6 +1189,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all29"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1211,6 +1228,7 @@ function poidlocmoim() {
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "all30"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1251,6 +1269,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1291,6 +1310,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1331,6 +1351,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1371,6 +1392,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1411,6 +1433,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1449,6 +1472,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1489,6 +1513,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1529,6 +1554,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1569,6 +1595,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1609,6 +1636,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1649,6 +1677,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1689,6 +1718,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1729,6 +1759,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1769,6 +1800,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1809,6 +1841,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1849,6 +1882,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo16"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1889,6 +1923,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo17"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1929,6 +1964,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo18"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -1969,6 +2005,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo19"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2009,6 +2046,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo20"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2049,6 +2087,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo21"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2089,6 +2128,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo22"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2129,6 +2169,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo23"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2169,6 +2210,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo24"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2209,6 +2251,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo25"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2249,6 +2292,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo26"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2289,6 +2333,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo27"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2329,6 +2374,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo28"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2369,6 +2415,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo29"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2409,6 +2456,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "gangseo30"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2449,6 +2497,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2489,6 +2538,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2529,6 +2579,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2569,6 +2620,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2609,6 +2661,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2649,6 +2702,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2689,6 +2743,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2729,6 +2784,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2769,6 +2825,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2809,6 +2866,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2849,6 +2907,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2889,6 +2948,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2929,6 +2989,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -2969,6 +3030,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3009,6 +3071,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3049,6 +3112,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa16"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3089,6 +3153,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa17"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3129,6 +3194,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa18"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3169,6 +3235,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa19"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3209,6 +3276,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa20"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3249,6 +3317,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa21"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3289,6 +3358,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa22"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3329,6 +3399,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa23"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3369,6 +3440,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa24"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3409,6 +3481,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa25"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3449,6 +3522,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa26"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3489,6 +3563,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa27"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3529,6 +3604,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa28"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3569,6 +3645,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa29"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3609,6 +3686,7 @@ function poidlocmoim() {
           //대여소위치파악
 
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "songpa30"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3641,17 +3719,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank1") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/14_16540852272930/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3662,7 +3738,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3685,17 +3761,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank2") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540852565830/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3706,7 +3780,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3729,17 +3803,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank3") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540852853030/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3750,7 +3822,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3773,17 +3845,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank4") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/3_16540853136890/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3794,7 +3864,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3817,17 +3887,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank5") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540853417750/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3838,7 +3906,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3861,17 +3929,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank6") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/1_16540856525510/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3882,7 +3948,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3905,17 +3971,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank7") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540856813430/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3926,7 +3990,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3949,17 +4013,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank8") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540853703330/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -3970,7 +4032,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -3993,17 +4055,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank9") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540853979560/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4014,7 +4074,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4037,17 +4097,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank10") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/3_16540857094390/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4058,7 +4116,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4081,17 +4139,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank11") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540854269140/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4102,7 +4158,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4125,17 +4181,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank12") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540854552790/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4146,7 +4200,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4169,17 +4223,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank13") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/7_16540857380940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4190,7 +4242,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4213,17 +4265,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank14") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540854830030/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4234,7 +4284,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4257,17 +4307,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank15") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540855107660/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4278,7 +4326,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4301,17 +4349,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank16") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540855394490/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all16"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4322,7 +4368,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4345,17 +4391,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank17") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/3_16540857663860/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all17"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4366,7 +4410,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4389,17 +4433,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank18") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540855684680/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all18"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4410,7 +4452,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4433,17 +4475,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank19") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/12_16540855953480/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all19"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4454,7 +4494,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4477,17 +4517,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank20") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540856247940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all20"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4498,7 +4536,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4521,17 +4559,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank21") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/68_16540857941710/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all21"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4542,7 +4578,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4565,17 +4601,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank22") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540858225720/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all22"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4586,7 +4620,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4609,17 +4643,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank23") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540858500110/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all23"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4630,7 +4662,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4653,17 +4685,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank24") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540858791750/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all24"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4674,7 +4704,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4697,17 +4727,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank25") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540859085760/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all25"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4718,7 +4746,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4741,17 +4769,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank26") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540859366950/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all26"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4762,7 +4788,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4785,17 +4811,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank27") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/4105_16540859641650/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all27"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4806,7 +4830,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4829,17 +4853,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank28") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540859921790/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all28"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4850,7 +4872,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4873,17 +4895,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank29") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540860207760/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all29"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4894,7 +4914,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4917,17 +4937,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-all-rank30") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             "https://public.tableau.com/views/_16540860487920/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-all30"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4938,7 +4956,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -4961,17 +4979,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank1") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/1_16540856525510/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -4982,7 +4998,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5005,17 +5021,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank2") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540856813430/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5026,7 +5040,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5049,17 +5063,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank3") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/3_16540857094390/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5070,7 +5082,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5093,17 +5105,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank4") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/7_16540857380940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5114,7 +5124,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5137,17 +5147,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank5") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/3_16540857663860/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5158,7 +5166,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5181,17 +5189,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank6") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/68_16540857941710/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5202,7 +5208,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5225,17 +5231,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank7") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540858225720/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5246,7 +5250,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5269,17 +5273,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank8") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540858500110/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5290,7 +5292,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5313,17 +5315,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank9") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540858791750/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5334,7 +5334,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5357,17 +5357,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank10") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540859085760/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5378,7 +5376,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5401,17 +5399,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank11") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540859366950/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5422,7 +5418,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5445,17 +5441,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank12") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/4105_16540859641650/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5466,7 +5460,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5489,17 +5483,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank13") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540859921790/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5510,7 +5502,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5533,17 +5525,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank14") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540860207760/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5554,7 +5544,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5577,17 +5567,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-songpa-rank15") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540860487920/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-songpa15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5598,7 +5586,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5621,17 +5609,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank1") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/14_16540852272930/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo1"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5642,7 +5628,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5665,17 +5651,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank2") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540852565830/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo2"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5686,7 +5670,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5709,17 +5693,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank3") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540852853030/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo3"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5730,7 +5712,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5753,17 +5735,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank4") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/3_16540853136890/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo4"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5774,7 +5754,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5797,17 +5777,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank5") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540853417750/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo5"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5818,7 +5796,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5841,17 +5819,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank6") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540853703330/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo6"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5862,7 +5838,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5885,17 +5861,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank7") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540853979560/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo7"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5906,7 +5880,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5929,17 +5903,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank8") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540854269140/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo8"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5950,7 +5922,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -5973,17 +5945,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank9") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540854552790/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo9"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -5994,7 +5964,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6017,17 +5987,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank10") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540854830030/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo10"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6038,7 +6006,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6061,17 +6029,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank11") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540855107660/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo11"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6082,7 +6048,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6105,17 +6071,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank12") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540855394490/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo12"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6126,7 +6090,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+          //
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6149,17 +6113,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank13") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540855684680/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo13"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6170,7 +6132,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6193,17 +6155,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank14") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/12_16540855953480/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo14"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6214,7 +6174,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6237,17 +6197,15 @@ function poidlocmoim() {
       if (node.checked && ioid == "d-gangseo-rank15") {
         if (node.id == "poi") {
           d3.select("dirbutton").style("visibility", "visible");
-          //poi지점 파악
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           src =
             " https://public.tableau.com/views/_16540856247940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link &amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
           maketableau(src);
         } else if (node.id == "dloc") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //대여소위치파악
-          //console.log(ioid);
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
+          dlocinfo();
           let tableaucontainer = document.createElement("img");
           tableaucontainer.setAttribute("src", "d-gangseo15"); //사진 설정
           tableaucontainer.setAttribute("alt", ioid);
@@ -6258,7 +6216,7 @@ function poidlocmoim() {
           document.getElementById("vizContainer").appendChild(tableaucontainer);
         } else if (node.id == "moim") {
           d3.select("dirbutton").style("visibility", "hidden");
-          //console.log(node.id); //노드 id 확인 dloc, moim, poi 잘나옴
+
           d3.selectAll("#vizContainer>*").remove();
           const addiframe = document.createElement("iframe");
           addiframe.setAttribute(
@@ -6310,7 +6268,7 @@ function guselect(gu) {
       "https://public.tableau.com/views/songpa/200?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
     d3.select("#vizContainer>iframe").attr("src", src); //송파구 뷰를 보여주겠다.
     songpa();
-    varpoi = document.getElementById("poi");
+    var poi = document.getElementById("poi");
     poi.checked = true;
     var ew = document.getElementById("edgeweight");
     ew.checked = true;
@@ -6356,8 +6314,13 @@ function allgu() {
     "잠실역 10번출구",
   ];
   var adddt = document.createElement("dt");
-  adddt.appendChild(document.createTextNode("전체구 POI순위"));
+  adddt.appendChild(document.createTextNode("전체구 POI순위 "));
+  var addimg = document.createElement("img");
+  addimg.setAttribute("id", "tool");
+  addimg.setAttribute("src", "whatisthis");
+  adddt.appendChild(addimg);
   document.getElementById("poi-ranking").appendChild(adddt);
+  poiiswhat();
   //ol설정
   var adddd = document.createElement("dd");
   var addol = document.createElement("ol");
@@ -6438,6 +6401,12 @@ function allgu() {
   }
   //li추가한 ol추가
   document.getElementById("duration-ranking").appendChild(adddd);
+  //
+  d3.selectAll("#ifa>*").remove();
+  var add3dmap = document.createElement("a");
+  add3dmap.innerHTML = "3D맵으로 보기(페이지가 이동됩니다.)";
+  add3dmap.setAttribute("href", "map3dmap");
+  document.getElementById("ifa").appendChild(add3dmap);
 }
 function poiselect(allrank) {
   //poi가 선택됐을 때 아래에 추가하는 부분
@@ -7044,7 +7013,7 @@ function poiselect(allrank) {
     }
 
     default: {
-      console.log("ㄴㄴ");
+      console.log("버튼연결에 오류가 생겼습니다.");
       break;
     }
   }
@@ -7087,8 +7056,13 @@ function gangseo() {
     "명덕고교입구교차로",
   ];
   var adddt = document.createElement("dt");
-  adddt.appendChild(document.createTextNode("강서구 POI순위"));
+  adddt.appendChild(document.createTextNode("강서구 POI순위 "));
+  var addimg = document.createElement("img");
+  addimg.setAttribute("id", "tool");
+  addimg.setAttribute("src", "whatisthis");
+  adddt.appendChild(addimg);
   document.getElementById("poi-ranking").appendChild(adddt);
+  poiiswhat();
   //ol설정
   var adddd = document.createElement("dd");
   var addol = document.createElement("ol");
@@ -7154,6 +7128,12 @@ function gangseo() {
   }
   //li추가한 ol추가
   document.getElementById("duration-ranking").appendChild(adddd);
+  //
+  d3.selectAll("#ifa>*").remove();
+  var add3dmap = document.createElement("a");
+  add3dmap.innerHTML = "3D맵으로 보기(페이지가 이동됩니다.)";
+  add3dmap.setAttribute("href", "map3dmap");
+  document.getElementById("ifa").appendChild(add3dmap);
 }
 
 function songpa() {
@@ -7194,8 +7174,13 @@ function songpa() {
     "잠실새내역 2번출구",
   ];
   var adddt = document.createElement("dt");
-  adddt.appendChild(document.createTextNode("송파구 POI순위"));
+  adddt.appendChild(document.createTextNode("송파구 POI순위 "));
+  var addimg = document.createElement("img");
+  addimg.setAttribute("id", "tool");
+  addimg.setAttribute("src", "whatisthis");
+  adddt.appendChild(addimg);
   document.getElementById("poi-ranking").appendChild(adddt);
+  poiiswhat();
   //ol설정
   var adddd = document.createElement("dd");
   var addol = document.createElement("ol");
@@ -7261,6 +7246,12 @@ function songpa() {
   }
   //li추가한 ol추가
   document.getElementById("duration-ranking").appendChild(adddd);
+  //
+  d3.selectAll("#ifa>*").remove();
+  var add3dmap = document.createElement("a");
+  add3dmap.innerHTML = "3D맵으로 보기(페이지가 이동됩니다.)";
+  add3dmap.setAttribute("href", "map3dmap");
+  document.getElementById("ifa").appendChild(add3dmap);
 }
 
 function tablemaker(rplace, rusername, rdate, rreviewin) {
@@ -7391,7 +7382,6 @@ function buttontableaureview(allrank) {
     }
     //리뷰테이블 만들기 - 장소,이름배열,날짜배열,리뷰배열 보내기
   }
-  console.log(rvusername);
   tablemaker(liinnertext, rvusername, rvdate, rvreviewin);
   //리뷰 달 수 있는 부분추가하기
   reviewing(liinnertext);
@@ -7415,7 +7405,6 @@ function his() {
         date.push(jsonRepository[i]["date"]);
         reviewin.push(jsonRepository[i]["reviewin"]);
       }
-      console.log(username);
       d3.selectAll("#ifa>*").remove(); //ifa초기화//ifa에 리뷰 넣겠습니다.
       var liinnertext = document.getElementById(ioid).innerText; //이름 가져오기
       //console.log(liinnertext);
@@ -8544,752 +8533,902 @@ function edir() {
             break;
           }
           case "all-rank1": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/31_16546832779120/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank2": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/GS2541/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank3": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546824256580/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank4": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833350180/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank5": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546824542000/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank6": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/671_16546824828830/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank7": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833639190/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank8": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833919600/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank9": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/GS2521/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank10": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546834497630/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank11": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546834777950/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank12": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546835055040/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank13": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546825108190/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank14": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/71_16546825394620/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank15": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835346530/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank16": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835625200/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank17": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/91_16546825681340/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank18": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546825960850/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank19": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835917270/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank20": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/781_16546836193420/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank21": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546836469100/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank22": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/NC1_16546826245210/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank23": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/NC1_16546826536910/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank24": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546826822280/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank25": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827102550/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank26": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827386270/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank27": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546827665000/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank28": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827951480/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank29": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546836757460/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "all-rank30": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/101_16546837047250/sheet2?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank1": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546824256580/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank2": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546824542000/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank3": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/671_16546824828830/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank4": {
-            src = "";
+            src =
+              "https://public.tableau.com/shared/M8YT6DWSS?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank5": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/71_16546825394620/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank6": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/91_16546825681340/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank7": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546825960850/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank8": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/NC1_16546826245210/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank9": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/NC1_16546826536910/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank10": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546826822280/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank11": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827102550/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank12": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827386270/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank13": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546827665000/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank14": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546827951480/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank15": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/LG1_16546828239570/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank16": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/31_16546828516960/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank17": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546828805770/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank18": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546829083910/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank19": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546829364260/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank20": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546829658290/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank21": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546829946610/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank22": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546830222830/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank23": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546830516290/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank24": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546830800090/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank25": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546831081260/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank26": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546831366960/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank27": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/61_16546831643760/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank28": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546831915870/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank29": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546832223200/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "gangseo-rank30": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546832497750/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank1": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/31_16546832779120/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank2": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/GS2541/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank3": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833350180/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank4": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833639190/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank5": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546833919600/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank6": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/GS2521/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank7": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546834497630/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank8": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546834777950/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank9": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546835055040/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank10": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835346530/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank11": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835625200/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank12": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546835917270/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank13": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/781_16546836193420/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank14": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546836469100/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank15": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546836757460/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank16": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/101_16546837047250/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank17": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546837331030/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank18": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546837616250/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank19": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/31_16546837888690/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank20": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546838190020/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank21": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546838469720/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank22": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546838747440/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank23": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/11_16546839033340/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank24": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546839318760/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank25": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546839604510/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank26": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546839890940/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank27": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/GS2511/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank28": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546840459170/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank29": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546840744760/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "songpa-rank30": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/21_16546841019410/sheet2?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank1": {
-            src = "";
+            src =
+              "https://public.tableau.com/shared/BY5R59BJJ?:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank2": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546933783660/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank3": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546909982260/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank4": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546910271360/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank5": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546910574310/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank6": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/11_16546910875200/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank7": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911151690/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank8": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911453940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank9": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911750950/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank10": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546912039010/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank11": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546912351050/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank12": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546912639550/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank13": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/71_16546912929670/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank14": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913225950/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank15": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913519560/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank16": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913813490/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank17": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546914097750/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank18": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546914386850/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank19": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/121_16546914703300/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank20": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546914990940/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank21": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/681_16546915287330/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank22": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546915576320/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank23": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546915862620/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank24": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916152190/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank25": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916457100/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank26": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916749850/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank27": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/41051/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank28": {
-            src = "";
+            src =
+              "https://public.tableau.com/views/1_16546917338390/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank29": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546917627790/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-all-rank30": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546917929720/sheet12?:language=ko-KR&publish=yes&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank1": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/11_16546910875200/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank2": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911151690/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank3": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546912039010/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank4": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/71_16546912929670/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank5": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546914097750/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank6": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/681_16546915287330/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank7": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546915576320/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank8": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546915862620/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank9": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916152190/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank10": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916457100/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank11": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546916749850/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank12": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/41051/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank13": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546917338390/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank14": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546917627790/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-songpa-rank15": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546917929720/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank1": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/141_16546909433630/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank2": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546933783660/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank3": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546909982260/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank4": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/31_16546910271360/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank5": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546910574310/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank6": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911453940/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank7": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546911750950/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank8": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546912351050/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank9": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546912639550/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank10": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913225950/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank11": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913519560/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank12": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546913813490/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank13": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546914386850/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank14": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/121_16546914703300/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
           case "d-gangseo-rank15": {
-            src = "";
+            src =
+              " https://public.tableau.com/views/1_16546914990940/sheet12?:language=ko-KR&:display_count=n&:origin=viz_share_link&amp;:size=1121,696&amp;:embed=y&amp;:showVizHome=n&amp;:bootstrapWhenNotified=y&amp;:apiID=host0#navType=1&amp;navSrc=Parse ";
             d3.select("#vizContainer>iframe").attr("src", src);
             break;
           }
@@ -9297,4 +9436,83 @@ function edir() {
       }
     });
   })();
+}
+
+function poiiswhat() {
+  //POI설명서
+  var tooltip = d3
+    .select("#selc")
+    .append("div")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background-color", "white")
+    .style("border", "1px solid #bbbbbb")
+    .text("POI란 사람들의 관심지점을 의미합니다.");
+
+  //
+  d3.selectAll("#tool")
+    .on("mouseover", function () {
+      return tooltip.style("visibility", "visible");
+    })
+    .on("mousemove", function () {
+      let mousePosition = d3.mouse(this);
+      return tooltip
+        .style("top", d3.event.pageY - 157 + "px")
+        .style("left", d3.event.pageX - 130 + "px");
+    })
+    .on("mouseout", function () {
+      return tooltip.style("visibility", "hidden");
+    });
+}
+function poiiswhat_about() {
+  //POI설명서
+  var tooltip = d3
+    .select("#selc")
+    .append("div")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background-color", "white")
+    .style("border", "1px solid #bbbbbb")
+    .text("POI란 사람들의 관심지점을 의미합니다.");
+
+  //
+  d3.selectAll("#tool")
+    .on("mouseover", function () {
+      return tooltip.style("visibility", "visible");
+    })
+    .on("mousemove", function () {
+      let mousePosition = d3.mouse(this);
+      return tooltip
+        .style("top", d3.event.pageY - 157 + "px")
+        .style("left", d3.event.pageX - 130 + "px");
+    })
+    .on("mouseout", function () {
+      return tooltip.style("visibility", "hidden");
+    });
+}
+function dlocinfo() {
+  var adddiv = document.createElement("div");
+  adddiv.setAttribute("class", "dlocinfo");
+
+  var adddimg = document.createElement("img");
+  adddimg.setAttribute("src", "hotspotloc");
+  adddimg.setAttribute("class", "dlocinfo_img");
+  var addda = document.createElement("a");
+  addda.innerHTML = "핫 스팟 위치";
+
+  var adddimg2 = document.createElement("img");
+  adddimg2.setAttribute("src", "rentloc");
+  adddimg2.setAttribute("class", "dlocinfo_img");
+  var addda2 = document.createElement("a");
+  addda2.innerHTML = "대여소 위치";
+
+  adddiv.appendChild(adddimg);
+  adddiv.appendChild(addda);
+  const brtag = document.createElement("br");
+  adddiv.appendChild(brtag);
+
+  adddiv.appendChild(adddimg2);
+  adddiv.appendChild(addda2);
+
+  document.getElementById("vizContainer").appendChild(adddiv);
 }
